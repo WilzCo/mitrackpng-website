@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | MiTrack PNG</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+header {
+    background: rgba(15,23,42,0.95);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #94a3b8;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #38bdf8;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: rgba(30,41,59,0.7);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+}
+
+.card h4 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+footer {
+    background: #0b1220;
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+}
+
+@media(max-width: 768px){
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MiTrack PNG</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Driving Visibility. Strengthening Control.</h2>
+    <p>
+        MiTrack PNG is a premium GPS fleet and asset tracking solution delivering
+        real-time monitoring, operational intelligence, and enhanced accountability
+        across Papua New Guinea.
+    </p>
+</div>
+
+<section>
+    <h3 class="section-title">Who We Are</h3>
+    <div class="content">
+        <p>
+            MiTrack PNG operates under <span class="highlight">Pacific Corporate Security</span>,
+            combining advanced GPS tracking technology with local operational expertise.
+        </p>
+        <p>
+            Built specifically for Papua New Guinea’s environment, our solutions provide
+            businesses with full visibility over vehicles and mobile assets — ensuring
+            safety, efficiency, and accountability at every level.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h3 class="section-title">Our Mission & Vision</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Our Mission</h4>
+            <p>
+                To deliver secure, reliable, and intelligent tracking solutions that empower
+                PNG businesses with operational clarity and control.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Our Vision</h4>
+            <p>
+                To become Papua New Guinea’s most trusted and innovative fleet
+                and asset tracking provider.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3 class="section-title">Why Choose MiTrack PNG</h3>
+    <div class="grid">
+
+        <div class="card">
+            <h4>Local Industry Backing</h4>
+            <p>
+                Supported by the operational strength and experience of Pacific Corporate Security.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Built for PNG Conditions</h4>
+            <p>
+                Engineered to operate efficiently within local infrastructure and terrain.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Advanced Monitoring</h4>
+            <p>
+                Real-time alerts, route playback, and detailed reporting for complete control.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Scalable Solutions</h4>
+            <p>
+                Flexible systems designed to grow alongside your fleet and operational needs.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 MiTrack PNG | A Service of Pacific Corporate Security
+</footer>
+
+</body>
+</html>
