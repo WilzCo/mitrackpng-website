@@ -253,3 +253,195 @@ footer {
 
 </body>
 </html>
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Section */
+.section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: #94a3b8;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 16px;
+    transition: 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+}
+
+.service-card h3 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.service-card p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-card ul {
+    margin-bottom: 25px;
+    padding-left: 18px;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.service-card .benefits {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    padding: 40px 10%;
+    text-align: center;
+    color: #94a3b8;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <h2>MiTrack PNG</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Enterprise Security Tracking Solutions</h1>
+    <p>
+        Advanced tracking, monitoring, and reporting systems designed to protect assets,
+        personnel, and operations across Papua New Guinea.
+    </p>
+</section>
+
+<section class="section">
+    <div class="section-title">
+        <h2>Our Core Services</h2>
+        <p>Comprehensive technology-backed security solutions for modern operations.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h3>Real-Time GPS Asset Tracking</h3>
+            <p>
+                Live vehicle and asset tracking with centralized monitoring dashboards
+                accessible anywhere, anytime.
+            </p>
+            <ul>
+                <li>Live GPS Monitoring</li>
+                <li>Geo-Fencing & Zone Alerts</li>
+                <li>Movement History & Reports</li>
+                <li>24/7 Monitoring Support</li>
+            </ul>
+            <div class="benefits">Business Impact:</div>
+            <p>
+                Reduce theft risk, improve fleet efficiency, and maintain operational visibility.
+            </p>
+            <a href="contact.html">Request Consultation →</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Security Personnel Monitoring</h3>
+            <p>
+                Track and verify guard patrol routes and attendance in real-time.
+            </p>
+            <ul>
+                <li>Guard Route Tracking</li>
+                <li>Attendance Verification</li>
+                <li>Incident Reporting</li>
+                <li>Supervisor Dashboard</li>
+            </ul>
+            <div class="benefits">Business Impact:</div>
+            <p>
+                Increase accountability, transparency, and client confidence.
+            </p>
+            <a href="contact.html">Request Consultation →</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Fleet Management Solutions</h3>
+            <p>
+                Intelligent fleet control system designed to optimize logistics and reduce operational costs.
+            </p>
+            <ul>
+                <li>Fuel Monitoring</li>
+                <li>Speed & Behavior Alerts</li>
+                <li>Maintenance Scheduling</li>
+                <li>Performance Analytics</li>
+            </ul>
+            <div class="benefits">Business Impact:</div>
+            <p>
+                Lower fuel expenses, improve driver safety, and extend vehicle lifespan.
+            </p>
+            <a href="contact.html">Request Consultation →</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 MiTrack PNG | Powered by Pacific Corporate Security
+</footer>
+
+</body>
+
+</html>
