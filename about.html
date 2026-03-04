@@ -12,11 +12,12 @@
 <nav>
   <div class="nav-left">
     <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    <button id="nav-toggle" aria-label="Toggle menu">☰</button>
   </div>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li><a href="service.html">Services</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
@@ -56,6 +57,19 @@
   <p>© 2026 MiTrack PNG | Powered by Pacific Corporate Security</p>
   <p>Hotline: +675 7543 6507 / +675 7939 5907 | Email: mitrack@mitrack.com.au</p>
 </footer>
+
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var nav = document.querySelector('nav');
+      if (nav) nav.classList.toggle('open');
+    });
+  })();
+</script>
 
 </body>
 </html>
