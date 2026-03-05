@@ -210,8 +210,9 @@ footer {
 
 @media (max-width: 768px) {
     nav { padding: 12px 6%; position: relative; }
-    #nav-toggle { display: block; margin-left: 12px; }
-    nav ul { display: none; position: absolute; top: 62px; right: 6%; background: #000; flex-direction: column; gap: 0; width: 220px; padding: 10px; border-radius: 8px; border: 1px solid #222; z-index: 50; }
+    .nav-left { width: 100%; justify-content: space-between; }
+    #nav-toggle { display: block; margin-left: auto; }
+    nav ul { display: none; position: absolute; top: 62px; right: 6%; left: auto; background: #000; flex-direction: column; gap: 0; width: 220px; padding: 10px; border-radius: 8px; border: 1px solid #222; z-index: 50; }
     nav.open ul { display: flex; }
     nav ul li { padding: 10px 12px; }
     nav ul li a { display: block; }
