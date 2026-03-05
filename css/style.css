@@ -76,7 +76,7 @@ nav ul li a:hover {
 
 /* HERO */
 .hero {
-    padding: 120px 8%;
+    padding: 30px 8%;
     text-align: center;
     background: linear-gradient(180deg, #000000 0%, #0d0d0d 100%);
 }
@@ -107,6 +107,7 @@ nav ul li a:hover {
     margin: 10px;
     display: inline-block;
     transition: 0.3s ease;
+    color: #0089f5
 }
 
 .btn-primary {
@@ -130,12 +131,12 @@ nav ul li a:hover {
 
 /* SECTIONS */
 .section {
-    padding: 100px 8%;
+    padding: 40px 8%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .section-title h2 {
