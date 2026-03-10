@@ -14,7 +14,7 @@ Static multi-page marketing site for MiTrack PNG.
 
 The contact form is wired to [FormSubmit](https://formsubmit.co/) via:
 
-- `https://formsubmit.co/ajax/mitrack@mitrack.com.au`
+- `https://formsubmit.co/el/wayimi`
 
 If you want to route messages to a different email provider/account:
 
