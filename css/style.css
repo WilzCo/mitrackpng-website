@@ -11,8 +11,13 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #0d0d0d;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     color: #f2f2f2;
+}
+
+body {
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 
 /* NAVBAR */
