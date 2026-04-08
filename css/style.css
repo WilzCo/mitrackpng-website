@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: #0d0d0d;
@@ -112,6 +116,24 @@ nav ul li a:hover {
     color: #000;
 }
 
+/* 🔥 NEW: SMALL BUTTON */
+.btn-small {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    font-size: 13px;
+    background: #f5c400;
+    color: #000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background: #ffda3a;
+}
+
 /* SECTIONS */
 .section {
     padding: 100px 8%;
@@ -125,6 +147,13 @@ nav ul li a:hover {
 .section-title h2 {
     color: #f5c400;
     font-size: 36px;
+}
+
+/* 🔥 NEW: SUBTEXT */
+.section-title p {
+    color: #999;
+    margin-top: 10px;
+    font-size: 15px;
 }
 
 /* GRID */
@@ -146,6 +175,7 @@ nav ul li a:hover {
 .card:hover {
     border-color: #f5c400;
     transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(245, 196, 0, 0.2);
 }
 
 .card h4 {
@@ -155,6 +185,31 @@ nav ul li a:hover {
 
 .card p {
     color: #cccccc;
+}
+
+/* 🔥 FORM STYLING */
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #f5c400;
+}
+
+form button {
+    width: 100%;
 }
 
 /* CTA */
@@ -175,6 +230,12 @@ nav ul li a:hover {
     margin-bottom: 25px;
 }
 
+/* 🔥 CTA BUTTON UPGRADE */
+.cta .btn {
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
 /* FOOTER */
 footer {
     background: #000;
@@ -184,8 +245,36 @@ footer {
     border-top: 1px solid #222;
 }
 
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
 
-/* Responsive adjustments */
+/* 🔥 CLICKABLE LINKS */
+footer a {
+    color: #f5c400;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 🔥 WHATSAPP BUTTON */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 22px;
+    padding: 12px 14px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
 @media (max-width: 900px) {
     .hero h1 { font-size: 40px; }
     .hero { padding: 80px 6%; }
@@ -195,13 +284,25 @@ footer {
 @media (max-width: 768px) {
     nav { padding: 12px 6%; position: relative; }
     #nav-toggle { display: block; margin-left: 12px; }
-    nav ul { display: none; position: absolute; top: 62px; right: 6%; background: #000; flex-direction: column; gap: 0; width: 220px; padding: 10px; border-radius: 8px; border: 1px solid #222; z-index: 50; }
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 62px;
+        right: 6%;
+        background: #000;
+        flex-direction: column;
+        width: 220px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #222;
+    }
+
     nav.open ul { display: flex; }
-    nav ul li { padding: 10px 12px; }
-    nav ul li a { display: block; }
+
     .hero { padding: 50px 6%; }
     .hero h1 { font-size: 28px; }
     .hero p { font-size: 16px; }
+
     .card { padding: 20px; }
     .grid { gap: 18px; }
     .logo { height: 45px; }
@@ -211,5 +312,4 @@ footer {
 @media (max-width: 420px) {
     .hero h1 { font-size: 22px; }
     .btn { padding: 10px 16px; }
-    nav.open ul { right: 4%; width: calc(100% - 32px); }
 }
