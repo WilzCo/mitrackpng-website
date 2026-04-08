@@ -313,3 +313,40 @@ footer a:hover {
     .hero h1 { font-size: 22px; }
     .btn { padding: 10px 16px; }
 }
+
+/* 🔥 FIX: FORM LAYOUT (CRITICAL) */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure inputs stack properly */
+form input,
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+}
+
+/* 🔥 FIX: CENTER FORM NICELY */
+.card form {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* 🔥 FIX: TEXTAREA SIZE */
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* 🔥 FIX: SPACING IMPROVEMENT */
+form input,
+form select {
+    height: 45px;
+}
+
+/* 🔥 FIX: BUTTON ALIGNMENT */
+form button {
+    margin-top: 10px;
+}
