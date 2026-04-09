@@ -13,10 +13,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(
         to bottom,
-        #020617 0%,   /* very dark (top) */
-        #0f172a 30%,  /* deep navy */
-        #1e293b 60%,  /* blue-grey */
-        #334155 100%  /* lighter bottom */
+        #020617,
+        #0f172a,
+        #1e293b
     );
     color: #f2f2f2;
     min-height: 100vh;
