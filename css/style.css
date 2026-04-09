@@ -24,12 +24,9 @@ body {
 
 /* NAVBAR */
 nav {
-    background: #000000;
-    padding: 18px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #f5c400;
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-left {
@@ -73,7 +70,7 @@ nav ul li a:hover {
 .hero {
     padding: 120px 8%;
     text-align: center;
-    background: linear-gradient(180deg, #000000 0%, #0d0d0d 100%);
+    background: transparent;
 }
 
 .hero h1 {
@@ -144,6 +141,7 @@ nav ul li a:hover {
 /* SECTIONS */
 .section {
     padding: 100px 8%;
+    background: transparent;
 }
 
 .section-title {
@@ -221,10 +219,10 @@ form button {
 
 /* CTA */
 .cta {
-    background: #000;
+    background: transparent;
     padding: 80px 8%;
     text-align: center;
-    border-top: 2px solid #f5c400;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .cta h3 {
@@ -245,11 +243,11 @@ form button {
 
 /* FOOTER */
 footer {
-    background: #000;
+    background: transparent;
     padding: 30px 8%;
     text-align: center;
     color: #777;
-    border-top: 1px solid #222;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 footer p {
