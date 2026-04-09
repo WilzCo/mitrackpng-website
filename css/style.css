@@ -72,10 +72,10 @@ nav ul li a:hover {
     color: #f5c400;
 }
 
-/* HERO */
+/* 🔥 HERO SPACING FIX */
 .hero {
     position: relative;
-    padding-top: 140px; /* 🔥 spacing fix */
+    padding-top: 140px;
 }
 
 /* 🔥 FIXED BLUE GLOW */
