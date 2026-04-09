@@ -41,7 +41,7 @@ nav {
 }
 
 .logo {
-    height: 65px; /* 🔥 bigger logo */
+    height: 65px;
     width: auto;
     display: block;
 }
@@ -70,11 +70,11 @@ nav ul li a:hover {
     color: #f5c400;
 }
 
-/* 🔥 HERO (FULL FIX) */
+/* 🔥 HERO (FIXED SPACING) */
 .hero {
     position: relative;
-    padding-top: 180px;
-    padding-bottom: 120px;
+    padding-top: 140px;  /* 🔥 reduced */
+    padding-bottom: 70px; /* 🔥 reduced */
 
     display: flex;
     flex-direction: column;
@@ -105,7 +105,7 @@ nav ul li a:hover {
     text-align: center;
     margin: 0 auto 20px;
 
-    color: #f5c400; /* 🔥 your brand yellow */
+    color: #f5c400;
     text-shadow: 0 0 20px rgba(245,196,0,0.15);
 }
 
@@ -118,7 +118,7 @@ nav ul li a:hover {
 
 /* HERO BUTTONS */
 .hero-buttons {
-    margin-top: 40px;
+    margin-top: 30px; /* 🔥 tighter */
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -178,6 +178,11 @@ nav ul li a:hover {
 .section {
     padding: 120px 8%;
     border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* 🔥 FIX GAP AFTER HERO */
+.section:first-of-type {
+    padding-top: 60px; /* 🔥 reduced */
 }
 
 /* DEPTH */
@@ -250,13 +255,6 @@ form textarea {
     background: #111;
     color: #fff;
     border-radius: 5px;
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus {
-    outline: none;
-    border-color: #f5c400;
 }
 
 /* CTA */
