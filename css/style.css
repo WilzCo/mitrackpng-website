@@ -304,3 +304,60 @@ footer {
     padding: 12px 14px;
     border-radius: 50%;
 }
+
+/* MAP SECTION FIX */
+.map-section {
+    text-align: center;
+}
+
+/* CENTER + CLEAN CONTAINER */
+.map-container {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+
+    /* 🔥 PREMIUM LOOK */
+    background: rgba(20,20,20,0.9);
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* MAP IMAGE */
+.map-container img {
+    width: 100%;
+    display: block;
+    opacity: 0.9;
+}
+
+/* BLUE OVERLAY (PCS TOUCH 🔥) */
+.map-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(59,130,246,0.15), transparent 70%);
+    pointer-events: none;
+}
+
+/* TRACKING POINTS */
+.map-point {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #f5c400;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #f5c400;
+    animation: pulse 2s infinite;
+}
+
+.point1 { top: 30%; left: 40%; }
+.point2 { top: 50%; left: 60%; }
+.point3 { top: 70%; left: 35%; }
+
+/* ANIMATION */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.6); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
