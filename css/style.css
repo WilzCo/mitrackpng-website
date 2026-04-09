@@ -104,6 +104,9 @@ nav ul li a:hover {
     line-height: 1.2;
     text-align: center;
     margin: 0 auto 20px;
+
+    color: #f5c400; /* 🔥 your brand yellow */
+    text-shadow: 0 0 20px rgba(245,196,0,0.15);
 }
 
 .hero p {
