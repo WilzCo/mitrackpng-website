@@ -22,7 +22,7 @@ body {
     min-height: 100vh;
 }
 
-/* 🔥 NAVBAR (FIXED) */
+/* 🔥 NAVBAR (REFINED ALIGNMENT) */
 nav {
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
@@ -35,26 +35,29 @@ nav {
     align-items: center;
 }
 
-/* 🔥 NAV LEFT */
+/* LEFT SIDE */
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-/* 🔥 LOGO FIX */
+/* 🔥 LOGO (FIXED SIZE & BALANCE) */
 .logo {
     height: 42px;
     width: auto;
     display: block;
 }
 
-/* 🔥 NAV LINKS FIX */
+/* 🔥 NAV LINKS (CLEAN ALIGNMENT + DIVIDER) */
 nav ul {
     list-style: none;
     display: flex;
     gap: 28px;
     align-items: center;
+
+    border-left: 1px solid rgba(255,255,255,0.08); /* 🔥 optional upgrade */
+    padding-left: 20px;
 }
 
 nav ul li a {
