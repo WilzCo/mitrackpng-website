@@ -22,19 +22,60 @@ body {
     min-height: 100vh;
 }
 
-/* NAVBAR */
+/* 🔥 NAVBAR (FIXED) */
 nav {
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    padding: 14px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 🔥 NAV LEFT */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 🔥 LOGO FIX */
+.logo {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+/* 🔥 NAV LINKS FIX */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f5c400;
 }
 
 /* HERO */
 .hero {
     position: relative;
+    padding-top: 140px; /* 🔥 spacing fix */
 }
 
-/* 🔥 FIXED BLUE GLOW (SOFTER + WIDER) */
+/* 🔥 FIXED BLUE GLOW */
 .hero::after {
     content: "";
     position: absolute;
@@ -116,13 +157,13 @@ nav {
     background: #ffda3a;
 }
 
-/* SECTIONS (SOFTER DIVIDERS + MORE SPACING) */
+/* SECTIONS */
 .section {
     padding: 120px 8%;
     border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
-/* OPTIONAL DEPTH EFFECT */
+/* DEPTH EFFECT */
 .section:nth-child(even) {
     background: rgba(255,255,255,0.01);
 }
@@ -150,7 +191,7 @@ nav {
     gap: 30px;
 }
 
-/* 🔥 FINAL CARD DESIGN */
+/* CARDS */
 .card {
     background: rgba(20, 20, 20, 0.85);
     padding: 35px;
