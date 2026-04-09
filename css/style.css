@@ -99,11 +99,11 @@ nav ul li a:hover {
 
 /* HERO TEXT */
 .hero h1 {
-    max-width: 800px;
+    max-width: 900px;
     font-size: 48px;
-    color: #f5c400;
-    margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(245,196,0,0.15);
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto 20px;
 }
 
 .hero p {
