@@ -174,19 +174,60 @@ nav ul li a:hover::after {
 .section {
     padding: 120px 8%;
     border-bottom: 1px solid rgba(255,255,255,0.03);
+    position: relative; /* 🔥 REQUIRED FOR GLOW */
+}
+
+/* 🔥 SUBTLE BLUE GLOW (KEY ADDITION) */
+.section::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 600px;
+    height: 220px;
+    background: radial-gradient(
+        circle,
+        rgba(59,130,246,0.08),
+        transparent 70%
+    );
+    transform: translateX(-50%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content stays above glow */
+.section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .section:first-of-type {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .section:nth-child(even) {
     background: rgba(255,255,255,0.01);
 }
 
+/* =========================
+   SECTION TITLE
+========================= */
 .section-title {
     text-align: center;
     margin-bottom: 60px;
+    position: relative;
+}
+
+/* 🔥 TITLE LINE ACCENT */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    margin: 15px auto 0;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    opacity: 0.6;
 }
 
 .section-title h2 {
