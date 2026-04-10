@@ -369,6 +369,7 @@ nav ul li a:hover::after {
     color: #ccc;
     backdrop-filter: blur(6px);
     animation: float 3s ease-in-out infinite;
+    opacity: 0.9;
 }
 
 .label1 { top: 30%; left: 48%; }
