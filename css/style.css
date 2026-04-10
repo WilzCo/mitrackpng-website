@@ -254,7 +254,7 @@ nav ul li a:hover::after {
 ========================= */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -265,11 +265,32 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255,255,255,0.04);
     border-top: 2px solid rgba(59,130,246,0.25);
     transition: 0.3s;
+    position: relative;        /* 🔥 REQUIRED */
+    overflow: hidden;          /* 🔥 REQUIRED */
 }
 
+/* 🔥 HIGH-END GLOW LAYER */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top,
+        rgba(59,130,246,0.15),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* 🔥 HOVER EFFECT */
 .card:hover {
     transform: translateY(-6px);
     border-color: rgba(59,130,246,0.4);
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card h4 {
@@ -449,6 +470,13 @@ footer {
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
 
     .hero h1 {
@@ -465,4 +493,10 @@ footer {
         gap: 15px;
     }
 
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
