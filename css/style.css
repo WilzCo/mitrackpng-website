@@ -199,6 +199,57 @@ nav ul li a:hover::after {
 }
 
 /* =========================
+   ABOUT SPLIT
+========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #f5c400;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.about-visual {
+    display: grid;
+    gap: 20px;
+}
+
+.about-card {
+    background: rgba(20,20,20,0.85);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-left: 3px solid #3b82f6;
+    transition: 0.3s;
+}
+
+/* 🔥 MICRO IMPROVEMENT (ADDED HERE) */
+.about-card h3 {
+    color: #f5c400;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* HOVER EFFECT */
+.about-card:hover {
+    transform: translateX(6px);
+    border-left: 3px solid #f5c400;
+}
+/* =========================
    GRID + CARDS
 ========================= */
 .grid {
@@ -399,12 +450,19 @@ footer {
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
     .hero h1 {
         font-size: 28px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     nav ul {
         flex-direction: column;
         gap: 15px;
     }
+
 }
