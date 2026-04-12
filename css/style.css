@@ -266,3 +266,61 @@ footer {
 footer strong {
     color: var(--pcs-blue);
 }
+
+/* =========================
+   🔥 GOLD + BLUE GRADIENT SYSTEM
+========================= */
+
+/* GRADIENT TEXT (PREMIUM LOOK) */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* HERO UPGRADE */
+.hero h1 {
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CTA BACKGROUND GRADIENT */
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(245,196,0,0.08), rgba(13,110,253,0.08));
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* CTA TITLE ENHANCEMENT */
+.cta h3 {
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CARD HOVER GLOW (DUAL BRAND) */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 0 10px rgba(245,196,0,0.2),
+        0 0 20px rgba(13,110,253,0.15);
+}
+
+/* NAV HOVER UPGRADE (SUBTLE GRADIENT FEEL) */
+.nav-links a:hover {
+    color: var(--pcs-blue);
+}
+
+/* OPTIONAL: BUTTON GRADIENT (USE SPARINGLY) */
+.btn-gradient {
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    color: #000;
+    border: none;
+}
+
+.btn-gradient:hover {
+    opacity: 0.9;
+}
