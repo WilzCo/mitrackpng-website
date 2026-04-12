@@ -420,3 +420,15 @@ footer strong {
         flex-direction: column;
     }
 }
+
+/* =========================
+   SELECT (DARK THEME FIX)
+========================= */
+.contact-form select {
+    background: rgba(255,255,255,0.05);
+    color: #ccc;
+    border: 1px solid rgba(255,255,255,0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
