@@ -331,3 +331,24 @@ footer {
 footer strong {
     color: var(--pcs-blue);
 }
+
+/* =========================
+   MOBILE NAV TOGGLE CONTROL
+========================= */
+
+/* Hide toggle by default (desktop) */
+#nav-toggle {
+    display: none;
+}
+
+/* Show only on small screens */
+@media (max-width: 768px) {
+    #nav-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+}
