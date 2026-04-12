@@ -41,12 +41,13 @@ nav {
     z-index: 1000;
 }
 
-/* TOP ROW (LOGO + TOGGLE) */
+/* 🔥 FIXED: CENTER LOGO ONLY */
 .nav-top {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;   /* changed */
     align-items: center;
+    position: relative;        /* added */
 }
 
 .nav-logo {
@@ -57,6 +58,13 @@ nav {
     margin-bottom: 0;
 }
 
+/* 🔥 KEEP TOGGLE RIGHT */
+#nav-toggle {
+    position: absolute;   /* added */
+    right: 0;             /* added */
+}
+
+/* LOGO */
 .logo {
     height: 80px;
     width: auto;
@@ -194,6 +202,14 @@ nav {
 
 .hero-buttons {
     margin-top: 30px;
+}
+
+/* =========================
+   🔥 MAP FIX ONLY
+========================= */
+.map-container img {
+    display: block;
+    margin: 0 auto;
 }
 
 /* =========================
