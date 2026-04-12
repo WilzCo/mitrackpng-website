@@ -352,3 +352,18 @@ footer strong {
         cursor: pointer;
     }
 }
+
+/* =========================
+   CARD LINKS (FIX COLOR)
+========================= */
+.card a {
+    color: var(--pcs-blue);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #4da3ff; /* lighter blue hover */
+    text-decoration: underline;
+}
