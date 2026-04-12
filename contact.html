@@ -7,9 +7,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
-<!-- ICON LIBRARY -->
-<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -135,16 +132,25 @@
   </p>
 </footer>
 
-<!-- MOBILE NAV SCRIPT -->
+<!-- SCRIPTS (SAFE ORDER) -->
+
+<!-- ICON LIBRARY -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- ICON INIT -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+});
+</script>
+
+<!-- MOBILE NAV -->
 <script>
 document.getElementById("nav-toggle").addEventListener("click", function() {
     document.querySelector("nav").classList.toggle("open");
 });
-</script>
-
-<!-- ICON INIT -->
-<script>
-lucide.createIcons();
 </script>
 
 <!-- SCROLL ANIMATION -->
