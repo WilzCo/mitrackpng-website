@@ -272,3 +272,43 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================
+   🖥 DESKTOP IMPROVEMENTS
+========================= */
+@media (min-width: 1024px) {
+
+    /* HERO - wider and more natural */
+    .hero {
+        max-width: 1000px;
+        text-align: left;
+        padding: 120px 40px 80px;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+
+    /* SECTION WIDTH */
+    .section {
+        max-width: 1200px;
+        padding: 80px 40px;
+    }
+
+    /* MAP - centered but not tiny */
+    .map-container {
+        max-width: 900px;
+    }
+
+    /* GRID - better spacing */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* NAV - cleaner spacing */
+    .nav-links {
+        justify-content: center;
+        gap: 40px;
+    }
+}
