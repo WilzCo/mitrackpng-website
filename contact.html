@@ -41,24 +41,22 @@
 </section>
 
 <!-- CONTACT FORM -->
-<section class="section">
-  <div class="section-title">
-    <h2>Send Us a Message</h2>
+<form class="contact-form">
+  
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
   </div>
 
-  <div class="card">
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-
-      <select name="service">
-        <option value="">Select Service</option>
-        <option value="gps">GPS Tracking</option>
-        <option value="cctv">CCTV Installation</option>
-        <option value="monitoring">24/7 Monitoring</option>
-        <option value="fleet">Fleet Management</option>
-      </select>
+  <div class="form-row">
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <select name="service">
+      <option value="">Select Service</option>
+      <option value="gps">GPS Tracking</option>
+      <option value="cctv">CCTV Installation</option>
+      <option value="monitoring">24/7 Monitoring</option>
+      <option value="fleet">Fleet Management</option>
+    </select>
 
       <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
 
