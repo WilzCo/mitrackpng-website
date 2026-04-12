@@ -4,24 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | MiTrack PNG</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-left">
-    <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
-    <button id="nav-toggle" aria-label="Toggle menu">☰</button>
+<!-- NAVBAR -->
+<nav class="nav-center">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    </a>
   </div>
-  <ul>
+
+  <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="service.html">Services</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <h1>Our Services</h1>
   <p>
@@ -30,6 +36,7 @@
   </p>
 </section>
 
+<!-- SERVICES -->
 <section class="section">
   <div class="section-title">
     <h2>Core Services</h2>
@@ -38,35 +45,30 @@
 
   <div class="grid">
 
-    <!-- GPS -->
     <div class="card">
       <h4>GPS Tracking</h4>
       <p>Monitor vehicles and assets in real-time with precise tracking systems.</p>
       <a href="contact.html" class="btn btn-small">Request GPS</a>
     </div>
 
-    <!-- CCTV -->
     <div class="card">
       <h4>CCTV Installation</h4>
       <p>Install CCTV and PTZ camera systems with remote monitoring capabilities.</p>
       <a href="contact.html" class="btn btn-small">Request CCTV</a>
     </div>
 
-    <!-- MONITORING -->
     <div class="card">
       <h4>24/7 Monitoring</h4>
       <p>Dedicated monitoring room with PCS TRU rapid response for emergencies.</p>
       <a href="contact.html" class="btn btn-small">Learn More</a>
     </div>
 
-    <!-- FLEET -->
     <div class="card">
       <h4>Fleet Management</h4>
       <p>Optimize vehicle usage, reduce fuel waste, and improve efficiency.</p>
       <a href="contact.html" class="btn btn-small">Request Solution</a>
     </div>
 
-    <!-- ALERTS -->
     <div class="card">
       <h4>Alerts & Notifications</h4>
       <p>Instant alerts for speed, geofencing, and emergency situations.</p>
@@ -75,30 +77,22 @@
 
   </div>
 </section>
-  
+
+<!-- CTA -->
 <section class="cta">
   <h3>Want a Tailored Solution?</h3>
   <p>Contact our team today to design a solution that fits your business.</p>
   <a href="contact.html" class="btn btn-primary">Request Consultation</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 MiTrack PNG | Powered by Pacific Corporate Security</p>
-  <p>Hotline: +675 7543 6507 / +675 7939 5907 | Email: mitrack@mitrack.com.au</p>
+  <p>
+    Hotline: +675 7543 6507 / +675 7939 5907 | 
+    Email: mitrack@mitrack.com.au
+  </p>
 </footer>
-
-</footer>
-
-<script>
-  (function(){
-    var btn = document.getElementById('nav-toggle');
-    if (!btn) return;
-    btn.addEventListener('click', function(){
-      var nav = document.querySelector('nav');
-      if (nav) nav.classList.toggle('open');
-    });
-  })();
-</script>
 
 </body>
 </html>
