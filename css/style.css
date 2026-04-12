@@ -25,16 +25,6 @@ body {
 }
 
 /* =========================
-   LAYOUT CENTERING FIX 🔥
-========================= */
-nav,
-.hero,
-.section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* =========================
    NAVBAR
 ========================= */
 nav {
@@ -51,35 +41,26 @@ nav {
     z-index: 1000;
 }
 
-/* GRID CENTERING (LOGO PERFECT CENTER) */
+/* TOP ROW (LOGO + TOGGLE) */
 .nav-top {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-/* LOGO CENTER */
 .nav-logo {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.nav-top .nav-logo {
+    margin-bottom: 0;
 }
 
 .logo {
     height: 80px;
     width: auto;
     filter: drop-shadow(0 0 12px rgba(245,196,0,0.25));
-}
-
-/* TOGGLE RIGHT */
-#nav-toggle {
-    display: none;
-    font-size: 26px;
-    background: none;
-    border: none;
-    color: #f5c400;
-    cursor: pointer;
-    justify-self: end;
 }
 
 /* NAV LINKS */
@@ -133,6 +114,15 @@ nav {
 /* =========================
    MOBILE NAV
 ========================= */
+#nav-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #f5c400;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
 
     #nav-toggle {
@@ -207,27 +197,6 @@ nav {
 }
 
 /* =========================
-   MAP FIX 🔥
-========================= */
-.map-section {
-    text-align: center;
-}
-
-.map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    position: relative;
-}
-
-.map-container img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
-/* =========================
    BUTTONS
 ========================= */
 .btn {
@@ -287,6 +256,8 @@ nav {
     background: radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%);
     transform: translateX(-50%);
     filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .section > * {
@@ -310,6 +281,16 @@ nav {
     margin-bottom: 60px;
 }
 
+.section-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    margin: 15px auto 0;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    opacity: 0.6;
+}
+
 .section-title h2 {
     color: #f5c400;
     font-size: 36px;
@@ -327,6 +308,35 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+}
+
+.about-text h2 {
+    color: #f5c400;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.about-visual {
+    display: grid;
+    gap: 20px;
+}
+
+.about-card {
+    background: rgba(20,20,20,0.85);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 3px solid #3b82f6;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateX(6px);
+    border-left: 3px solid #f5c400;
 }
 
 /* =========================
@@ -362,6 +372,14 @@ nav {
 
 .card:hover {
     transform: translateY(-6px);
+}
+
+.card h4 {
+    color: #f5c400;
+}
+
+.card p {
+    color: #ccc;
 }
 
 /* =========================
