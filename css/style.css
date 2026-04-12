@@ -36,10 +36,25 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* TOP ROW (LOGO + TOGGLE) */
+.nav-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-logo {
     margin-bottom: 15px;
+}
+
+.nav-top .nav-logo {
+    margin-bottom: 0;
 }
 
 .logo {
@@ -71,8 +86,16 @@ nav {
     color: #f5c400;
 }
 
+/* ACTIVE LINK */
+.nav-links a.active {
+    color: #f5c400;
+}
 
-/* UNDERLINE ANIMATION */
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* UNDERLINE */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -88,12 +111,50 @@ nav {
     width: 100%;
 }
 
-.nav-links a.active {
+/* =========================
+   MOBILE NAV
+========================= */
+#nav-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
     color: #f5c400;
+    cursor: pointer;
 }
 
-.nav-links a.active::after {
-    width: 100%;
+@media (max-width: 768px) {
+
+    #nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        border-top: none;
+        gap: 15px;
+    }
+
+    nav.open .nav-links {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .logo {
+        height: 60px;
+    }
 }
 
 /* =========================
@@ -105,7 +166,6 @@ nav {
     text-align: center;
 }
 
-/* BLUE GLOW */
 .hero::after {
     content: "";
     position: absolute;
@@ -146,7 +206,7 @@ nav {
     font-weight: 600;
     margin: 5px;
     display: inline-block;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -183,10 +243,9 @@ nav {
 .section {
     padding: 120px 8%;
     border-bottom: 1px solid rgba(255,255,255,0.03);
-    position: relative; /* 🔥 REQUIRED FOR GLOW */
+    position: relative;
 }
 
-/* 🔥 SUBTLE BLUE GLOW (KEY ADDITION) */
 .section::before {
     content: "";
     position: absolute;
@@ -194,18 +253,13 @@ nav {
     left: 50%;
     width: 600px;
     height: 220px;
-    background: radial-gradient(
-        circle,
-        rgba(59,130,246,0.08),
-        transparent 70%
-    );
+    background: radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%);
     transform: translateX(-50%);
     filter: blur(60px);
     pointer-events: none;
     z-index: 0;
 }
 
-/* Ensure content stays above glow */
 .section > * {
     position: relative;
     z-index: 1;
@@ -225,10 +279,8 @@ nav {
 .section-title {
     text-align: center;
     margin-bottom: 60px;
-    position: relative;
 }
 
-/* 🔥 TITLE LINE ACCENT */
 .section-title::after {
     content: "";
     display: block;
@@ -249,7 +301,7 @@ nav {
 }
 
 /* =========================
-   ABOUT SPLIT
+   ABOUT
 ========================= */
 .about-grid {
     display: grid;
@@ -278,29 +330,17 @@ nav {
     background: rgba(20,20,20,0.85);
     padding: 25px;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.05);
     border-left: 3px solid #3b82f6;
     transition: 0.3s;
 }
 
-/* 🔥 MICRO IMPROVEMENT (ADDED HERE) */
-.about-card h3 {
-    color: #f5c400;
-    margin-bottom: 8px;
-}
-
-.about-card p {
-    color: #ccc;
-    font-size: 14px;
-}
-
-/* HOVER EFFECT */
 .about-card:hover {
     transform: translateX(6px);
     border-left: 3px solid #f5c400;
 }
+
 /* =========================
-   GRID + CARDS
+   GRID
 ========================= */
 .grid {
     display: grid;
@@ -308,199 +348,38 @@ nav {
     gap: 30px;
 }
 
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   CARDS
+========================= */
 .card {
     background: rgba(20,20,20,0.85);
     padding: 35px;
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.04);
-    border-top: 2px solid rgba(59,130,246,0.25);
     transition: 0.3s;
-    position: relative;        /* 🔥 REQUIRED */
-    overflow: hidden;          /* 🔥 REQUIRED */
 }
 
-/* 🔥 HIGH-END GLOW LAYER */
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        circle at top,
-        rgba(59,130,246,0.15),
-        transparent 60%
-    );
-    opacity: 0;
-    transition: 0.4s;
-}
-
-/* 🔥 HOVER EFFECT */
 .card:hover {
     transform: translateY(-6px);
-    border-color: rgba(59,130,246,0.4);
-}
-
-.card:hover::before {
-    opacity: 1;
 }
 
 .card h4 {
     color: #f5c400;
-    margin-bottom: 10px;
 }
 
 .card p {
     color: #ccc;
-}
-
-/* =========================
-   MAP SECTION (REFINED 🔥)
-========================= */
-.map-section {
-    text-align: center;
-}
-
-.map-container {
-    position: relative;
-    max-width: 950px;
-    margin: 60px auto 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: rgba(10,10,10,0.9);
-    border: 1px solid rgba(255,255,255,0.05);
-    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
-    transition: 0.4s ease;
-    backdrop-filter: blur(4px);
-}
-
-/* 🔥 HOVER ZOOM */
-.map-container:hover img {
-    transform: scale(1.03);
-}
-
-.map-container img {
-    width: 100%;
-    display: block;
-    filter: brightness(0.9) contrast(1.1);
-    transition: 0.6s ease;
-}
-
-/* 🔥 ANIMATED BLUE GLOW */
-.map-container::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(circle at 50% 50%, rgba(59,130,246,0.18), transparent 65%);
-    animation: glowPulse 6s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-    0% { opacity: 0.4; }
-    50% { opacity: 0.9; }
-    100% { opacity: 0.4; }
-}
-
-/* =========================
-   TRACKING POINTS
-========================= */
-.map-point {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #f5c400;
-    border-radius: 50%;
-    box-shadow: 0 0 12px #f5c400;
-}
-
-.map-point::after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border: 2px solid #f5c400;
-    border-radius: 50%;
-    top: -7px;
-    left: -7px;
-    animation: radar 2s infinite;
-}
-
-@keyframes radar {
-    0% {
-        transform: scale(0.5);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2);
-        opacity: 0;
-    }
-}
-
-.point1 { top: 35%; left: 45%; }
-.point2 { top: 55%; left: 65%; }
-.point3 { top: 70%; left: 30%; }
-
-/* =========================
-   FLOW LINES
-========================= */
-.map-line {
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
-    opacity: 0.7;
-    animation: flow 4s linear infinite;
-}
-
-.line1 {
-    top: 45%;
-    left: 40%;
-    width: 200px;
-    transform: rotate(20deg);
-}
-
-.line2 {
-    top: 60%;
-    left: 30%;
-    width: 220px;
-    transform: rotate(-25deg);
-}
-
-@keyframes flow {
-    0% {
-        transform: translateX(-40px);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(40px);
-        opacity: 0;
-    }
-}
-
-/* =========================
-   FLOATING LABELS
-========================= */
-.map-label {
-    font-size: 13px;
-    font-weight: 500;
-    background: rgba(0,0,0,0.75);
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #ccc;
-    backdrop-filter: blur(6px);
-    animation: float 3s ease-in-out infinite;
-    opacity: 0.9;
-}
-
-.label1 { top: 30%; left: 48%; }
-.label2 { top: 52%; left: 68%; }
-.label3 { top: 72%; left: 33%; }
-
-@keyframes float {
-    0%,100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
 }
 
 /* =========================
@@ -515,38 +394,4 @@ footer {
     padding: 30px 8%;
     text-align: center;
     border-top: 1px solid rgba(59,130,246,0.15);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-}
-
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
 }
