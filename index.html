@@ -35,7 +35,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero fade-in">
   <h1>Secure Your Assets & Operations in Real-Time</h1>
   <p>
     MiTrack PNG provides advanced GPS tracking, CCTV monitoring, and 24/7 rapid response solutions 
@@ -49,30 +49,23 @@
 </section>
 
 <!-- LIVE TRACKING MAP -->
-<section class="section map-section">
+<section class="section map-section fade-in">
   <div class="section-title">
     <h2>Live Tracking Overview</h2>
     <p>Monitor vehicles, assets, and personnel in real-time across Papua New Guinea.</p>
   </div>
 
-  <!-- 🔥 IMPORTANT: container must wrap everything -->
   <div class="map-container">
-
-    <!-- MAP IMAGE -->
     <img src="assets/images/map.png" alt="Live GPS Map">
 
-    <!-- VISUAL LINES -->
     <div class="map-line line1"></div>
     <div class="map-line line2"></div>
 
-    <!-- 🔥 GLOWING TRACKING POINTS -->
     <div class="map-point point1"></div>
     <div class="map-point point2"></div>
     <div class="map-point point3"></div>
-
   </div>
 
-  <!-- ✅ TEXT UNDER MAP -->
   <div class="map-info">
     <p>Vehicle A</p>
     <p>Unit 23</p>
@@ -81,25 +74,25 @@
 </section>
 
 <!-- SERVICES PREVIEW -->
-<section class="section">
+<section class="section fade-in">
   <div class="section-title">
     <h2>Our Solutions</h2>
   </div>
 
   <div class="grid">
-    <div class="card">
+    <div class="card fade-in">
       <h4>GPS Tracking</h4>
       <p>Real-time location tracking for vehicles and assets to reduce loss and improve efficiency.</p>
       <a href="contact.html" class="btn btn-small">Request GPS Solution</a>
     </div>
 
-    <div class="card">
+    <div class="card fade-in">
       <h4>CCTV & Surveillance</h4>
       <p>Install CCTV and PTZ camera systems with remote monitoring for security and compliance.</p>
       <a href="contact.html" class="btn btn-small">Request CCTV Solution</a>
     </div>
 
-    <div class="card">
+    <div class="card fade-in">
       <h4>24/7 Monitoring</h4>
       <p>Dedicated monitoring room with PCS TRU rapid response for emergencies and alerts.</p>
       <a href="contact.html" class="btn btn-small">Learn More</a>
@@ -108,23 +101,23 @@
 </section>
 
 <!-- TRUST -->
-<section class="section">
+<section class="section fade-in">
   <div class="section-title">
     <h2>Why Clients Trust MiTrack PNG</h2>
   </div>
 
   <div class="grid">
-    <div class="card">
+    <div class="card fade-in">
       <h4>Powered by PCS</h4>
       <p>Backed by Pacific Corporate Security’s national expertise.</p>
     </div>
 
-    <div class="card">
+    <div class="card fade-in">
       <h4>Rapid Response</h4>
       <p>On-ground teams and instant alerts for emergencies.</p>
     </div>
 
-    <div class="card">
+    <div class="card fade-in">
       <h4>Operational Transparency</h4>
       <p>Clear reporting and monitoring dashboards for every client.</p>
     </div>
@@ -132,14 +125,14 @@
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta fade-in">
   <h3>Ready to Protect Your Business?</h3>
   <p>Contact us today and get a personalized consultation for your tracking and security needs.</p>
   <a href="contact.html" class="btn btn-primary">Request Consultation</a>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="fade-in">
   <p>© 2026 MiTrack PNG | Powered by <strong>Pacific Corporate Security</strong></p>
   <p>
     Hotline: +675 7543 6507 / +675 7939 5907 | 
@@ -152,6 +145,23 @@
 document.getElementById("nav-toggle").addEventListener("click", function() {
     document.querySelector("nav").classList.toggle("open");
 });
+</script>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+faders.forEach(el => observer.observe(el));
 </script>
 
 </body>
