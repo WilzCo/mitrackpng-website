@@ -14,11 +14,13 @@
 <!-- NAVBAR -->
 <nav class="nav-center">
   <div class="nav-logo">
-    <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    </a>
   </div>
 
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -39,7 +41,7 @@
   </div>
 </section>
 
-<!-- 🔥 LIVE TRACKING MAP -->
+<!-- LIVE TRACKING MAP -->
 <section class="section map-section">
   <div class="section-title">
     <h2>Live Tracking Overview</h2>
@@ -47,24 +49,18 @@
   </div>
 
   <div class="map-container">
-
-    <!-- MAP -->
     <img src="assets/images/map.png" alt="Live GPS Map">
 
-    <!-- CONNECTION LINES -->
     <div class="map-line line1"></div>
     <div class="map-line line2"></div>
 
-    <!-- TRACKING POINTS -->
     <div class="map-point point1"></div>
     <div class="map-point point2"></div>
     <div class="map-point point3"></div>
 
-    <!-- LABELS -->
     <div class="map-label label1">Vehicle A</div>
     <div class="map-label label2">Unit 23</div>
     <div class="map-label label3">Active Patrol</div>
-
   </div>
 </section>
 
@@ -95,7 +91,7 @@
   </div>
 </section>
 
-<!-- TRUST / CREDIBILITY -->
+<!-- TRUST -->
 <section class="section">
   <div class="section-title">
     <h2>Why Clients Trust MiTrack PNG</h2>
@@ -119,7 +115,7 @@
   </div>
 </section>
 
-<!-- CALL TO ACTION -->
+<!-- CTA -->
 <section class="cta">
   <h3>Ready to Protect Your Business?</h3>
   <p>Contact us today and get a personalized consultation for your tracking and security needs.</p>
@@ -134,17 +130,6 @@
     Email: mitrack@mitrack.com.au
   </p>
 </footer>
-
-<script>
-  (function(){
-    var btn = document.getElementById('nav-toggle');
-    if (!btn) return;
-    btn.addEventListener('click', function(){
-      var nav = document.querySelector('nav');
-      if (nav) nav.classList.toggle('open');
-    });
-  })();
-</script>
 
 </body>
 </html>
