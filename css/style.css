@@ -1,4 +1,12 @@
 /* =========================
+   VARIABLES (BRANDING)
+========================= */
+:root {
+    --primary-gold: #f5c400;
+    --pcs-blue: #0d6efd;
+}
+
+/* =========================
    GLOBAL RESET
 ========================= */
 * {
@@ -50,7 +58,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #f5c400;
+    color: var(--primary-gold);
 }
 
 /* =========================
@@ -63,7 +71,7 @@ nav {
 
 .hero h1 {
     font-size: 42px;
-    color: #f5c400;
+    color: var(--primary-gold);
     margin-bottom: 20px;
 }
 
@@ -89,8 +97,9 @@ nav {
     transition: 0.3s;
 }
 
+/* PRIMARY (MiTrack Gold) */
 .btn-primary {
-    background: #f5c400;
+    background: var(--primary-gold);
     color: #000;
 }
 
@@ -98,14 +107,26 @@ nav {
     background: #ffd633;
 }
 
+/* OUTLINE (Gold) */
 .btn-outline {
-    border: 1px solid #f5c400;
-    color: #f5c400;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
 }
 
 .btn-outline:hover {
-    background: #f5c400;
+    background: var(--primary-gold);
     color: #000;
+}
+
+/* SECONDARY (PCS BLUE - OPTIONAL USE) */
+.btn-secondary {
+    border: 1px solid var(--pcs-blue);
+    color: var(--pcs-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--pcs-blue);
+    color: #fff;
 }
 
 .btn-small {
@@ -126,8 +147,18 @@ nav {
 }
 
 .section-title h2 {
-    color: #f5c400;
+    color: var(--primary-gold);
     margin-bottom: 10px;
+}
+
+/* PCS BLUE ACCENT LINE */
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--pcs-blue);
+    margin: 8px auto 0;
 }
 
 .section-title p {
@@ -153,16 +184,24 @@ nav {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: #f5c400;
+    background: var(--primary-gold);
     border-radius: 50%;
-    box-shadow: 0 0 10px #f5c400, 0 0 20px #f5c400;
+    box-shadow: 0 0 10px var(--primary-gold), 0 0 20px var(--primary-gold);
     animation: pulse 1.5s infinite;
 }
 
+/* PCS BLUE ACTIVE POINT */
+.point2 {
+    background: var(--pcs-blue);
+    box-shadow: 0 0 10px var(--pcs-blue), 0 0 20px var(--pcs-blue);
+}
+
+/* POSITIONING */
 .point1 { top: 40%; left: 30%; }
 .point2 { top: 55%; left: 60%; }
 .point3 { top: 25%; left: 70%; }
 
+/* ANIMATION */
 @keyframes pulse {
     0% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.6); opacity: 0.6; }
@@ -192,7 +231,7 @@ nav {
 }
 
 .card h4 {
-    color: #f5c400;
+    color: var(--primary-gold);
     margin-bottom: 10px;
 }
 
@@ -209,7 +248,7 @@ nav {
 }
 
 .cta h3 {
-    color: #f5c400;
+    color: var(--primary-gold);
     margin-bottom: 15px;
 }
 
@@ -221,4 +260,9 @@ footer {
     padding: 30px;
     font-size: 13px;
     color: #777;
+}
+
+/* PCS BRAND HIGHLIGHT */
+footer strong {
+    color: var(--pcs-blue);
 }
