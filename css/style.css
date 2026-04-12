@@ -16,7 +16,7 @@
 }
 
 /* =========================
-   BODY + BACKGROUND (FINAL)
+   BODY + BACKGROUND
 ========================= */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -31,7 +31,6 @@ body {
     line-height: 1.6;
 }
 
-/* 🔥 BACKGROUND GLOW */
 body::before {
     content: "";
     position: fixed;
@@ -49,46 +48,34 @@ body::before {
 }
 
 /* =========================
-   NAVBAR (UPDATED ✅)
+   NAVBAR
 ========================= */
 nav {
     width: 100%;
     padding: 15px 20px;
     background: #000;
-}
-
-/* ✅ Center layout structure */
-.nav-center {
     text-align: center;
 }
 
-/* ✅ Stack logo + toggle properly */
 .nav-top {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* ✅ Logo centered */
 .nav-logo {
-    display: flex;
-    justify-content: center;
     margin-bottom: 10px;
 }
 
 .logo {
     height: 80px;
-    display: block;
-    margin: 0 auto;
 }
 
-/* NAV LINKS */
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 30px;
     list-style: none;
-    margin-top: 10px;
 }
 
 .nav-links a {
@@ -160,37 +147,12 @@ nav {
     color: #000;
 }
 
-.btn-secondary {
-    border: 1px solid var(--pcs-blue);
-    color: var(--pcs-blue);
-}
-
-.btn-secondary:hover {
-    background: var(--pcs-blue);
-    color: #fff;
-}
-
-.btn-gradient {
-    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
-    color: #000;
-    border: none;
-}
-
-.btn-gradient:hover {
-    opacity: 0.9;
-}
-
-.btn-small {
-    margin-top: 10px;
-    display: inline-block;
-}
-
 /* =========================
-   SECTION (GLASS EFFECT)
+   SECTION (GLASS)
 ========================= */
 .section {
     padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255,255,255,0.03);
     backdrop-filter: blur(6px);
     border-radius: 12px;
     margin: 30px auto;
@@ -204,16 +166,6 @@ nav {
 
 .section-title h2 {
     color: var(--primary-gold);
-    margin-bottom: 10px;
-}
-
-.section-title h2::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: var(--pcs-blue);
-    margin: 8px auto 0;
 }
 
 .section-title p {
@@ -240,13 +192,13 @@ nav {
     height: 10px;
     background: var(--primary-gold);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--primary-gold), 0 0 20px var(--primary-gold);
+    box-shadow: 0 0 10px var(--primary-gold);
     animation: pulse 1.5s infinite;
 }
 
 .point2 {
     background: var(--pcs-blue);
-    box-shadow: 0 0 10px var(--pcs-blue), 0 0 20px var(--pcs-blue);
+    box-shadow: 0 0 10px var(--pcs-blue);
 }
 
 .point1 { top: 40%; left: 30%; }
@@ -254,9 +206,7 @@ nav {
 .point3 { top: 25%; left: 70%; }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.6); opacity: 0.6; }
-    100% { transform: scale(1); opacity: 1; }
 }
 
 .map-info {
@@ -275,27 +225,80 @@ nav {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255,255,255,0.04);
     padding: 25px;
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 0 10px rgba(245,196,0,0.2),
-        0 0 20px rgba(13,110,253,0.15);
 }
 
 .card h4 {
     color: var(--primary-gold);
-    margin-bottom: 10px;
 }
 
 .card p {
     color: #aaa;
+}
+
+.card a {
+    color: var(--pcs-blue);
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #4da3ff;
+}
+
+/* =========================
+   CONTACT FORM (FIXED)
+========================= */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(20,20,20,0.9);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ✅ FIXED DROPDOWN */
+.contact-form select {
+    cursor: pointer;
+    appearance: none;
+}
+
+/* MUST be solid (browser limitation) */
+.contact-form select option {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--pcs-blue);
+    box-shadow: 0 0 8px rgba(13,110,253,0.4);
+}
+
+/* textarea */
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 10px;
 }
 
 /* =========================
@@ -304,18 +307,10 @@ nav {
 .cta {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(
-        135deg,
-        rgba(245,196,0,0.08),
-        rgba(13,110,253,0.08)
-    );
 }
 
 .cta h3 {
-    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
+    color: var(--primary-gold);
 }
 
 /* =========================
@@ -328,135 +323,23 @@ footer {
     color: #777;
 }
 
-footer strong {
-    color: var(--pcs-blue);
-}
-
 /* =========================
-   MOBILE NAV TOGGLE CONTROL
+   MOBILE
 ========================= */
-
-/* Hide toggle by default (desktop) */
 #nav-toggle {
     display: none;
 }
 
-/* Show only on small screens */
 @media (max-width: 768px) {
     #nav-toggle {
         display: block;
-        font-size: 24px;
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
     }
-}
 
-/* =========================
-   CARD LINKS (FIX COLOR)
-========================= */
-.card a {
-    color: var(--pcs-blue);
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-.card a:hover {
-    color: #4da3ff; /* lighter blue hover */
-    text-decoration: underline;
-}
-
-/* =========================
-   CONTACT FORM FIX
-========================= */
-
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Row layout */
-.form-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-/* Inputs + select */
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.05);
-    color: #fff;
-    font-size: 14px;
-}
-
-/* Fix dropdown text */
-.contact-form select {
-    color: #ccc;
-}
-
-/* Textarea full width */
-.contact-form textarea {
-    resize: none;
-}
-
-/* Button spacing */
-.contact-form button {
-    margin-top: 10px;
-}
-
-/* =========================
-   MOBILE FIX
-========================= */
-@media (max-width: 768px) {
     .form-row {
         flex-direction: column;
     }
-}
 
-/* =========================
-   SELECT (DARK THEME FIX)
-========================= */
-.contact-form select {
-    background: rgba(255,255,255,0.05);
-    color: #ccc;
-    border: 1px solid rgba(255,255,255,0.1);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-/* DROPDOWN OPTIONS */
-.contact-form select option {
-    background: #0a0a0a;
-    color: #fff;
-}
-
-.contact-form select:focus {
-    outline: none;
-    border-color: var(--pcs-blue);
-    box-shadow: 0 0 8px rgba(13,110,253,0.3);
-}
-
-/* =========================
-   SELECT (GLASS STYLE)
-========================= */
-.contact-form select {
-    background: rgba(255,255,255,0.05);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(6px);
-}
-
-/* DROPDOWN OPTIONS (BEST POSSIBLE STYLING) */
-.contact-form select option {
-    background: rgba(10, 10, 10, 0.95); /* near-transparent feel */
-    color: #fff;
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
