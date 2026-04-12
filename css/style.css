@@ -343,3 +343,16 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ICON ALIGNMENT */
+.card h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card i {
+    width: 18px;
+    height: 18px;
+    color: #4da6ff; /* PCS blue */
+}
