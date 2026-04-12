@@ -432,3 +432,15 @@ footer strong {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
+/* DROPDOWN OPTIONS */
+.contact-form select option {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--pcs-blue);
+    box-shadow: 0 0 8px rgba(13,110,253,0.3);
+}
