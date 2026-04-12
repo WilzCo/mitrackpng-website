@@ -4,36 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | MiTrack PNG</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-left">
-    <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
-    <button id="nav-toggle" aria-label="Toggle menu">☰</button>
+<!-- NAVBAR -->
+<nav class="nav-center">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    </a>
   </div>
-  <ul>
+
+  <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="service.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <h1>Contact MiTrack PNG</h1>
   <p>Get in touch to request a consultation or learn more about our solutions.</p>
 </section>
 
+<!-- CONTACT FORM -->
 <section class="section">
-  <div class="section-title"><h2>Send Us a Message</h2></div>
+  <div class="section-title">
+    <h2>Send Us a Message</h2>
+  </div>
+
   <div class="card">
     <form action="#" method="POST">
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
+
       <select name="service">
         <option value="">Select Service</option>
         <option value="gps">GPS Tracking</option>
@@ -41,23 +52,31 @@
         <option value="monitoring">24/7 Monitoring</option>
         <option value="fleet">Fleet Management</option>
       </select>
+
       <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </section>
 
+<!-- CONTACT INFO -->
 <section class="section">
-  <div class="section-title"><h2>Contact Information</h2></div>
+  <div class="section-title">
+    <h2>Contact Information</h2>
+  </div>
+
   <div class="grid">
     <div class="card">
       <h4>Hotline</h4>
       <p><a href="tel:+67575436507">+675 7543 6507</a></p>
     </div>
+
     <div class="card">
       <h4>Email</h4>
       <p><a href="mailto:mitrack@mitrack.com.au">mitrack@mitrack.com.au</a></p>
     </div>
+
     <div class="card">
       <h4>Office</h4>
       <p>Port Moresby, Papua New Guinea</p>
@@ -65,28 +84,20 @@
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h3>Ready to Get Started?</h3>
   <a href="contact.html" class="btn btn-primary">Request Consultation</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 MiTrack PNG | Powered by Pacific Corporate Security</p>
-  <p>Hotline: +675 7543 6507 / +675 7939 5907 | Email: mitrack@mitrack.com.au</p>
+  <p>
+    Hotline: +675 7543 6507 / +675 7939 5907 | 
+    Email: mitrack@mitrack.com.au
+  </p>
 </footer>
-
-</footer>
-
-<script>
-  (function(){
-    var btn = document.getElementById('nav-toggle');
-    if (!btn) return;
-    btn.addEventListener('click', function(){
-      var nav = document.querySelector('nav');
-      if (nav) nav.classList.toggle('open');
-    });
-  })();
-</script>
 
 </body>
 </html>
