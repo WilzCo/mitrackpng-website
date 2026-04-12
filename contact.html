@@ -35,54 +35,61 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero fade-in">
   <h1>Contact MiTrack PNG</h1>
   <p>Get in touch to request a consultation or learn more about our solutions.</p>
 </section>
 
 <!-- CONTACT FORM -->
-<form class="contact-form">
-  
-  <div class="form-row">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
+<section class="section fade-in">
+  <div class="section-title">
+    <h2>Send Us a Message</h2>
   </div>
 
-  <div class="form-row">
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <select name="service">
-      <option value="">Select Service</option>
-      <option value="gps">GPS Tracking</option>
-      <option value="cctv">CCTV Installation</option>
-      <option value="monitoring">24/7 Monitoring</option>
-      <option value="fleet">Fleet Management</option>
-    </select>
+  <form class="contact-form">
 
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+    </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
+    <div class="form-row">
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      
+      <select name="service">
+        <option value="">Select Service</option>
+        <option value="gps">GPS Tracking</option>
+        <option value="cctv">CCTV Installation</option>
+        <option value="monitoring">24/7 Monitoring</option>
+        <option value="fleet">Fleet Management</option>
+      </select>
+    </div>
+
+    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
 </section>
 
 <!-- CONTACT INFO -->
-<section class="section">
+<section class="section fade-in">
   <div class="section-title">
     <h2>Contact Information</h2>
   </div>
 
   <div class="grid">
-    <div class="card">
+    <div class="card fade-in">
       <h4>Hotline</h4>
       <p><a href="tel:+67575436507">+675 7543 6507</a></p>
     </div>
 
-    <div class="card">
+    <div class="card fade-in">
       <h4>Email</h4>
       <p><a href="mailto:mitrack@mitrack.com.au">mitrack@mitrack.com.au</a></p>
     </div>
 
-    <div class="card">
+    <div class="card fade-in">
       <h4>Office</h4>
       <p>Port Moresby, Papua New Guinea</p>
     </div>
@@ -90,13 +97,13 @@
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta fade-in">
   <h3>Ready to Get Started?</h3>
   <a href="contact.html" class="btn btn-primary">Request Consultation</a>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="fade-in">
   <p>© 2026 MiTrack PNG | Powered by <strong>Pacific Corporate Security</strong></p>
   <p>
     Hotline: +675 7543 6507 / +675 7939 5907 | 
@@ -109,6 +116,23 @@
 document.getElementById("nav-toggle").addEventListener("click", function() {
     document.querySelector("nav").classList.toggle("open");
 });
+</script>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+faders.forEach(el => observer.observe(el));
 </script>
 
 </body>
