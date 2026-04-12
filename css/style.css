@@ -15,11 +15,36 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   BODY + BACKGROUND (UPDATED)
+========================= */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #0a0a0a;
+    background: linear-gradient(
+        135deg,
+        #050505 0%,
+        #0a0a0a 40%,
+        #0d1b2a 100%
+    );
     color: #fff;
     line-height: 1.6;
+}
+
+/* 🔥 BACKGROUND OVERLAY GLOW */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at top right,
+        rgba(13,110,253,0.08),
+        transparent 60%
+    );
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* =========================
@@ -71,7 +96,9 @@ nav {
 
 .hero h1 {
     font-size: 42px;
-    color: var(--primary-gold);
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
@@ -97,7 +124,7 @@ nav {
     transition: 0.3s;
 }
 
-/* PRIMARY (MiTrack Gold) */
+/* PRIMARY */
 .btn-primary {
     background: var(--primary-gold);
     color: #000;
@@ -107,7 +134,7 @@ nav {
     background: #ffd633;
 }
 
-/* OUTLINE (Gold) */
+/* OUTLINE */
 .btn-outline {
     border: 1px solid var(--primary-gold);
     color: var(--primary-gold);
@@ -118,7 +145,7 @@ nav {
     color: #000;
 }
 
-/* SECONDARY (PCS BLUE - OPTIONAL USE) */
+/* PCS BLUE */
 .btn-secondary {
     border: 1px solid var(--pcs-blue);
     color: var(--pcs-blue);
@@ -127,6 +154,17 @@ nav {
 .btn-secondary:hover {
     background: var(--pcs-blue);
     color: #fff;
+}
+
+/* GRADIENT BUTTON */
+.btn-gradient {
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    color: #000;
+    border: none;
+}
+
+.btn-gradient:hover {
+    opacity: 0.9;
 }
 
 .btn-small {
@@ -151,7 +189,7 @@ nav {
     margin-bottom: 10px;
 }
 
-/* PCS BLUE ACCENT LINE */
+/* PCS BLUE ACCENT */
 .section-title h2::after {
     content: "";
     display: block;
@@ -179,7 +217,7 @@ nav {
     border-radius: 10px;
 }
 
-/* GLOWING POINTS */
+/* TRACKING POINTS */
 .map-point {
     position: absolute;
     width: 10px;
@@ -190,13 +228,13 @@ nav {
     animation: pulse 1.5s infinite;
 }
 
-/* PCS BLUE ACTIVE POINT */
+/* PCS BLUE POINT */
 .point2 {
     background: var(--pcs-blue);
     box-shadow: 0 0 10px var(--pcs-blue), 0 0 20px var(--pcs-blue);
 }
 
-/* POSITIONING */
+/* POSITIONS */
 .point1 { top: 40%; left: 30%; }
 .point2 { top: 55%; left: 60%; }
 .point3 { top: 25%; left: 70%; }
@@ -228,6 +266,14 @@ nav {
     background: #111;
     padding: 25px;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 0 10px rgba(245,196,0,0.2),
+        0 0 20px rgba(13,110,253,0.15);
 }
 
 .card h4 {
@@ -245,10 +291,17 @@ nav {
 .cta {
     text-align: center;
     padding: 80px 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(245,196,0,0.08),
+        rgba(13,110,253,0.08)
+    );
 }
 
 .cta h3 {
-    color: var(--primary-gold);
+    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 15px;
 }
 
@@ -262,65 +315,6 @@ footer {
     color: #777;
 }
 
-/* PCS BRAND HIGHLIGHT */
 footer strong {
     color: var(--pcs-blue);
-}
-
-/* =========================
-   🔥 GOLD + BLUE GRADIENT SYSTEM
-========================= */
-
-/* GRADIENT TEXT (PREMIUM LOOK) */
-.gradient-text {
-    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* HERO UPGRADE */
-.hero h1 {
-    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* CTA BACKGROUND GRADIENT */
-.cta {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(245,196,0,0.08), rgba(13,110,253,0.08));
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* CTA TITLE ENHANCEMENT */
-.cta h3 {
-    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* CARD HOVER GLOW (DUAL BRAND) */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 0 10px rgba(245,196,0,0.2),
-        0 0 20px rgba(13,110,253,0.15);
-}
-
-/* NAV HOVER UPGRADE (SUBTLE GRADIENT FEEL) */
-.nav-links a:hover {
-    color: var(--pcs-blue);
-}
-
-/* OPTIONAL: BUTTON GRADIENT (USE SPARINGLY) */
-.btn-gradient {
-    background: linear-gradient(90deg, var(--primary-gold), var(--pcs-blue));
-    color: #000;
-    border: none;
-}
-
-.btn-gradient:hover {
-    opacity: 0.9;
 }
