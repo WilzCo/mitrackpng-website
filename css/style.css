@@ -312,3 +312,22 @@ footer {
         gap: 40px;
     }
 }
+
+/* FORCE DESKTOP LAYOUT */
+
+.hero {
+    max-width: 1000px;
+    text-align: left;
+}
+
+.hero-buttons {
+    justify-content: flex-start;
+}
+
+.section {
+    max-width: 1200px;
+}
+
+.map-container {
+    max-width: 900px;
+}
