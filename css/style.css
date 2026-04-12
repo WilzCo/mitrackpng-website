@@ -356,3 +356,57 @@ footer {
     height: 18px;
     color: #4da6ff; /* PCS blue */
 }
+
+/* =========================
+   ABOUT SECTION FIX
+========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* RIGHT SIDE CARDS */
+.about-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-card {
+    background: rgba(255,255,255,0.03);
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.about-card h3 {
+    color: #f5c400;
+    margin-bottom: 5px;
+}
+
+.about-card p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* HOVER EFFECT */
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 150, 255, 0.4);
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
