@@ -49,7 +49,7 @@ body::before {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (UPDATED ✅)
 ========================= */
 nav {
     width: 100%;
@@ -57,16 +57,32 @@ nav {
     background: #000;
 }
 
+/* ✅ Center layout structure */
+.nav-center {
+    text-align: center;
+}
+
+/* ✅ Stack logo + toggle properly */
 .nav-top {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+}
+
+/* ✅ Logo centered */
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .logo {
     height: 40px;
+    display: block;
+    margin: 0 auto;
 }
 
+/* NAV LINKS */
 .nav-links {
     display: flex;
     justify-content: center;
