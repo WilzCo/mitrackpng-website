@@ -212,6 +212,18 @@ nav {
     margin: 0 auto;
 }
 
+/* ✅ ADD THIS (TEXT UNDER MAP) */
+.map-info {
+    text-align: center;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.map-info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
 /* =========================
    BUTTONS
 ========================= */
