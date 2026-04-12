@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- ICON LIBRARY -->
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -21,7 +24,6 @@
       </a>
     </div>
 
-    <!-- MOBILE BUTTON -->
     <button id="nav-toggle" aria-label="Toggle menu">☰</button>
 
   </div>
@@ -55,7 +57,7 @@
 
     <div class="form-row">
       <input type="tel" name="phone" placeholder="Phone Number" required>
-      
+
       <select name="service">
         <option value="">Select Service</option>
         <option value="gps">GPS Tracking</option>
@@ -76,29 +78,51 @@
 <section class="section fade-in">
   <div class="section-title">
     <h2>Contact Information</h2>
+    <p>Reach out to our team directly through the details below.</p>
   </div>
 
   <div class="grid">
+
     <div class="card fade-in">
-      <h4>Hotline</h4>
-      <p><a href="tel:+67575436507">+675 7543 6507</a></p>
+      <h4><i data-lucide="phone"></i> Hotline</h4>
+      <p>
+        <a href="tel:+67575436507">+675 7543 6507</a><br>
+        <a href="tel:+67579395907">+675 7939 5907</a>
+      </p>
     </div>
 
     <div class="card fade-in">
-      <h4>Email</h4>
-      <p><a href="mailto:mitrack@mitrack.com.au">mitrack@mitrack.com.au</a></p>
+      <h4><i data-lucide="mail"></i> Email</h4>
+      <p>
+        <a href="mailto:mitrack@mitrack.com.au">
+          mitrack@mitrack.com.au
+        </a>
+      </p>
     </div>
 
     <div class="card fade-in">
-      <h4>Office</h4>
-      <p>Port Moresby, Papua New Guinea</p>
+      <h4><i data-lucide="map-pin"></i> Office Location</h4>
+      <p>
+        Port Moresby<br>
+        Papua New Guinea
+      </p>
     </div>
+
+    <div class="card fade-in">
+      <h4><i data-lucide="clock"></i> Availability</h4>
+      <p>
+        24/7 Monitoring & Support<br>
+        Powered by PCS Rapid Response
+      </p>
+    </div>
+
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta fade-in">
   <h3>Ready to Get Started?</h3>
+  <p>Speak with our team and secure your operations today.</p>
   <a href="contact.html" class="btn btn-primary">Request Consultation</a>
 </section>
 
@@ -118,7 +142,12 @@ document.getElementById("nav-toggle").addEventListener("click", function() {
 });
 </script>
 
-<!-- SCROLL ANIMATION SCRIPT -->
+<!-- ICON INIT -->
+<script>
+lucide.createIcons();
+</script>
+
+<!-- SCROLL ANIMATION -->
 <script>
 const faders = document.querySelectorAll('.fade-in');
 
