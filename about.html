@@ -14,7 +14,9 @@
 <!-- NAVBAR -->
 <nav class="nav-center">
   <div class="nav-logo">
-    <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+    </a>
   </div>
 
   <ul class="nav-links">
@@ -25,7 +27,7 @@
   </ul>
 </nav>
 
-<!-- HERO (UPDATED 🔥) -->
+<!-- HERO -->
 <section class="hero">
   <h1>About MiTrack PNG</h1>
   <p>
@@ -36,10 +38,11 @@
   </p>
 </section>
 
+<!-- ABOUT -->
 <section class="section about-split">
   <div class="about-grid">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
     <div class="about-text">
       <h2>Who We Are</h2>
       <p>
@@ -59,7 +62,7 @@
       </p>
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT -->
     <div class="about-visual">
 
       <div class="about-card">
@@ -96,7 +99,7 @@
   </div>
 </section>
 
-<!-- TRUST / EXPERTISE -->
+<!-- TRUST -->
 <section class="section">
   <div class="section-title">
     <h2>Trusted Expertise</h2>
@@ -135,18 +138,6 @@
     Email: mitrack@mitrack.com.au
   </p>
 </footer>
-
-<!-- NAV TOGGLE SCRIPT -->
-<script>
-  (function(){
-    var btn = document.getElementById('nav-toggle');
-    if (!btn) return;
-    btn.addEventListener('click', function(){
-      var nav = document.querySelector('nav');
-      if (nav) nav.classList.toggle('open');
-    });
-  })();
-</script>
 
 </body>
 </html>
