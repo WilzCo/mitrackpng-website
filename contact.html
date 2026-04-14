@@ -116,7 +116,7 @@
   </div>
 </section>
 
-<!-- ✅ TEAM CONTACT (ADDED ONLY) -->
+<!-- TEAM CONTACT -->
 <section class="section fade-in">
   <div class="section-title">
     <h2>Key Contacts</h2>
@@ -125,51 +125,45 @@
 
   <div class="grid">
 
-  <!-- PAUL (Highlighted) -->
-  <div class="card fade-in">
-    <h4>⭐ Paul Young</h4>
-    <p><strong>National Branch Manager</strong></p>
-    <p>
-      📞 <a href="tel:+67571915137">+675 7191 5137</a><br>
-      📧 <a href="mailto:paul.young@mitrack.com.au">paul.young@mitrack.com.au</a>
-    </p>
+    <div class="card fade-in">
+      <h4>⭐ Paul Young</h4>
+      <p><strong>National Branch Manager</strong></p>
+      <p>
+        📞 <a href="tel:+67571915137">+675 7191 5137</a><br>
+        📧 <a href="mailto:paul.young@mitrack.com.au">paul.young@mitrack.com.au</a>
+      </p>
+    </div>
+
+    <div class="card fade-in">
+      <h4>Dewith Fitcher</h4>
+      <p><strong>Team Leader</strong></p>
+      <p>
+        📞 <a href="tel:+67575914066">+675 7591 4066</a><br>
+        📧 <a href="mailto:dewith@mitrack.com.au">dewith@mitrack.com.au</a>
+      </p>
+    </div>
+
+    <div class="card fade-in">
+      <h4>Garme Nuahui</h4>
+      <p><strong>Senior Technician</strong></p>
+      <p>
+        📞 <a href="tel:+67572200623">+675 7220 0623</a><br>
+        📧 <a href="mailto:garme@mitrack.com.au">garme@mitrack.com.au</a>
+      </p>
+    </div>
+
+    <div class="card fade-in">
+      <h4>Irene Dala Harry</h4>
+      <p><strong>Accounts Receivable</strong></p>
+      <p>
+        📞 <a href="tel:+67570658376">+675 7065 8376</a><br>
+        📧 <a href="mailto:accounts.receivable@pcsgroup.com.pg">
+          accounts.receivable@pcsgroup.com.pg
+        </a>
+      </p>
+    </div>
+
   </div>
-
-  <!-- DEWITH (UPDATED) -->
-  <div class="card fade-in">
-    <h4>Dewith Fitcher</h4>
-    <p><strong>Team Leader</strong></p>
-    <p>
-      📞 <a href="tel:+67575914066">+675 7591 4066</a><br>
-      📧 <a href="mailto:dewith@mitrack.com.au">dewith@mitrack.com.au</a>
-    </p>
-  </div>
-
-  <!-- GARME (UPDATED) -->
-  <div class="card fade-in">
-    <h4>Garme Nuahui</h4>
-    <p><strong>Senior Technician</strong></p>
-    <p>
-      📞 <a href="tel:+67572200623">+675 7220 0623</a><br>
-      📧 <a href="mailto:garme@mitrack.com.au">garme@mitrack.com.au</a>
-    </p>
-  </div>
-
-  <!-- IRENE -->
-  <div class="card fade-in">
-    <h4>Irene Dala Harry</h4>
-    <p><strong>Accounts Receivable</strong></p>
-    <p>
-      📞 <a href="tel:+67570658376">+675 7065 8376</a><br>
-      📧 <a href="mailto:accounts.receivable@pcsgroup.com.pg">
-        accounts.receivable@pcsgroup.com.pg
-      </a>
-    </p>
-  </div>
-
-</div>
-</div>
-
 </section>
 
 <!-- CTA -->
@@ -217,27 +211,8 @@ function sendEmail(e) {
 }
 </script>
 
-<!-- NAV TOGGLE -->
-<script>
-document.getElementById("nav-toggle").addEventListener("click", function() {
-    document.querySelector("nav").classList.toggle("open");
-});
-</script>
-
-<!-- FADE-IN ANIMATION -->
-<script>
-const faders = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, { threshold: 0.2 });
-
-faders.forEach(el => observer.observe(el));
-</script>
+<!-- MAIN JS -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
