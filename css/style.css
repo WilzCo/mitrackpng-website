@@ -180,7 +180,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-top: 20px; /* ✅ added */
+    margin-top: 20px;
 }
 
 /* =========================
@@ -199,10 +199,9 @@ nav {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    line-height: 1.5; /* ✅ added */
+    line-height: 1.5;
 }
 
-/* Hover */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
     border: 1px solid rgba(0, 150, 255, 0.6);
@@ -211,7 +210,6 @@ nav {
         0 0 20px rgba(0, 150, 255, 0.15);
 }
 
-/* Light sweep */
 .card::before {
     content: "";
     position: absolute;
@@ -227,7 +225,6 @@ nav {
     left: 120%;
 }
 
-/* Text */
 .card h4 {
     color: var(--primary-gold);
     display: flex;
@@ -241,7 +238,7 @@ nav {
 
 .card p {
     color: #aaa;
-    margin: 10px 0; /* ✅ added */
+    margin: 10px 0;
 }
 
 .card a {
@@ -254,7 +251,7 @@ nav {
 }
 
 .card .btn {
-    margin-top: 12px; /* ✅ added */
+    margin-top: 12px;
 }
 
 /* =========================
@@ -267,7 +264,6 @@ nav {
     margin-bottom: 5px;
 }
 
-/* FEATURES LIST (NEW - SAFE ADD) */
 .features {
     margin: 10px 0;
     padding-left: 18px;
@@ -343,6 +339,32 @@ nav {
 .contact-form select option {
     background: #0a0a0a;
     color: #fff;
+}
+
+/* =========================
+   MOTTO SECTION (ADDED ONLY)
+========================= */
+.motto {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.motto-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.motto-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-gold);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
 }
 
 /* =========================
