@@ -180,10 +180,11 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    margin-top: 20px; /* ✅ added */
 }
 
 /* =========================
-   CARD (🔥 FIXED + PREMIUM)
+   CARD
 ========================= */
 .card {
     background: linear-gradient(
@@ -193,28 +194,24 @@ nav {
     );
     padding: 25px;
     border-radius: 12px;
-
     border: 1px solid rgba(255,255,255,0.05);
-
     transition: all 0.35s ease;
-
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    line-height: 1.5; /* ✅ added */
 }
 
-/* 🔥 HOVER EFFECT */
+/* Hover */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
-
     border: 1px solid rgba(0, 150, 255, 0.6);
-
     box-shadow: 
         0 15px 40px rgba(0, 150, 255, 0.2),
         0 0 20px rgba(0, 150, 255, 0.15);
 }
 
-/* ✨ LIGHT SWEEP */
+/* Light sweep */
 .card::before {
     content: "";
     position: absolute;
@@ -230,13 +227,12 @@ nav {
     left: 120%;
 }
 
-/* TEXT */
+/* Text */
 .card h4 {
     color: var(--primary-gold);
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: 0.3s;
 }
 
 .card:hover h4 {
@@ -245,6 +241,7 @@ nav {
 
 .card p {
     color: #aaa;
+    margin: 10px 0; /* ✅ added */
 }
 
 .card a {
@@ -256,19 +253,29 @@ nav {
     color: #8ecbff;
 }
 
-/* BUTTON ANIMATION */
-.card:hover .btn {
-    transform: translateY(-3px);
+.card .btn {
+    margin-top: 12px; /* ✅ added */
 }
 
 /* =========================
-   🔥 PRODUCT FUNCTIONALITY (ONLY ADDITION)
+   PRODUCT FUNCTIONALITY
 ========================= */
 .product-functions h5 {
     font-size: 13px;
     color: var(--light-blue);
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+/* FEATURES LIST (NEW - SAFE ADD) */
+.features {
+    margin: 10px 0;
+    padding-left: 18px;
+}
+
+.features li {
+    margin-bottom: 5px;
+    color: #ccc;
 }
 
 /* =========================
@@ -351,18 +358,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.about-card {
-    background: rgba(255,255,255,0.03);
-    padding: 18px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.about-card:hover {
-    transform: translateY(-5px);
-    border: 1px solid rgba(0,150,255,0.4);
 }
 
 /* =========================
