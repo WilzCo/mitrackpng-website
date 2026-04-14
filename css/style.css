@@ -262,6 +262,16 @@ nav {
 }
 
 /* =========================
+   🔥 PRODUCT FUNCTIONALITY (ONLY ADDITION)
+========================= */
+.product-functions h5 {
+    font-size: 13px;
+    color: var(--light-blue);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* =========================
    MAP
 ========================= */
 .map-container {
