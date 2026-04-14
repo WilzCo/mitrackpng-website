@@ -346,7 +346,8 @@ nav {
 ========================= */
 .motto {
     text-align: center;
-    padding: 40px 20px;
+    padding: 10px 20px 40px; /* less top space */
+    margin-top: -30px;       /* pulls it closer to hero */
 }
 
 .motto-container {
