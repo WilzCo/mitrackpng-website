@@ -32,7 +32,7 @@ nav {
 }
 
 .logo {
-    height: 50px;
+    height: 55px;
 }
 
 /* MOBILE BUTTON */
@@ -68,11 +68,11 @@ nav {
     transition: 0.3s;
 }
 
+/* GOLD PRIMARY + BLUE ACCENT */
 .nav-links a:hover,
 .nav-links a.active {
-    background: linear-gradient(90deg, #f5c400, #4da3ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f5c400;
+    text-shadow: 0 0 6px rgba(77,163,255,0.5);
 }
 
 /* MOBILE NAV */
@@ -99,9 +99,8 @@ nav {
 
 .hero h1 {
     font-size: 42px;
-    background: linear-gradient(90deg, #f5c400, #4da3ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f5c400;
+    text-shadow: 0 0 10px rgba(77,163,255,0.3);
     margin-bottom: 20px;
 }
 
@@ -128,13 +127,13 @@ nav {
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #f5c400, #4da3ff);
+    background: #f5c400;
     color: #000;
     font-weight: 600;
 }
 
 .btn-primary:hover {
-    opacity: 0.9;
+    background: #ffd633;
 }
 
 .btn-outline {
@@ -165,9 +164,7 @@ nav {
 }
 
 .section-title h2 {
-    background: linear-gradient(90deg, #f5c400, #4da3ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f5c400;
     margin-bottom: 10px;
 }
 
@@ -193,7 +190,7 @@ nav {
 }
 
 .card h4 {
-    color: #4da3ff;
+    color: #f5c400;
     margin-bottom: 10px;
 }
 
@@ -202,7 +199,7 @@ nav {
 }
 
 /* =========================
-   FEATURES LIST (NEW FIX)
+   FEATURES LIST
 ========================= */
 .features {
     margin-top: 10px;
@@ -244,7 +241,7 @@ nav {
     border-radius: 10px;
 }
 
-/* GLOW POINTS */
+/* GLOWING POINTS (BLUE ACCENT) */
 .map-point {
     position: absolute;
     width: 10px;
@@ -265,7 +262,6 @@ nav {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* MAP TEXT */
 .map-info {
     text-align: center;
     margin-top: 15px;
@@ -295,7 +291,7 @@ input, select, textarea {
     color: #fff;
 }
 
-/* FIX DROPDOWN VISIBILITY */
+/* DROPDOWN FIX */
 select {
     background: rgba(0,0,0,0.6);
 }
@@ -309,9 +305,7 @@ select {
 }
 
 .cta h3 {
-    background: linear-gradient(90deg, #f5c400, #4da3ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f5c400;
     margin-bottom: 15px;
 }
 
