@@ -50,23 +50,22 @@ body::before {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (UPDATED LAYOUT ONLY)
 ========================= */
 nav {
     width: 100%;
-    padding: 15px 20px;
+    padding: 15px 30px;
     background: #000;
-    text-align: center;
-}
 
-.nav-top {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
+/* LEFT - LOGO */
 .nav-logo {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -78,10 +77,14 @@ nav {
     transform: scale(1.05);
 }
 
+/* CENTER - NAV LINKS */
 .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
 }
 
@@ -342,12 +345,12 @@ nav {
 }
 
 /* =========================
-   MOTTO SECTION (ADDED ONLY)
+   MOTTO
 ========================= */
 .motto {
     text-align: center;
-    padding: 10px 20px 40px; /* less top space */
-    margin-top: -30px;       /* pulls it closer to hero */
+    padding: 10px 20px 40px;
+    margin-top: -30px;
 }
 
 .motto-container {
@@ -361,15 +364,12 @@ nav {
 }
 
 .motto-text {
-    font-family: 'Playfair Display', serif; /* or Great Vibes */
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-style: italic;
-
     color: var(--primary-gold);
-
     letter-spacing: 1px;
     text-align: center;
-
     text-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
 }
 
