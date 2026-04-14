@@ -7,6 +7,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- ✅ STEP 1: LUCIDE ICONS -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
 <body>
@@ -61,11 +65,11 @@
       </div>
 
       <ul class="features">
-        <li>Real-time location tracking</li>
-        <li>Route playback and trip history</li>
-        <li>Speed monitoring and alerts</li>
-        <li>Geofencing capabilities</li>
-        <li>Engine and fuel monitoring</li>
+        <li><i data-lucide="map-pin"></i> Real-time location tracking</li>
+        <li><i data-lucide="route"></i> Route playback and trip history</li>
+        <li><i data-lucide="gauge"></i> Speed monitoring and alerts</li>
+        <li><i data-lucide="map"></i> Geofencing capabilities</li>
+        <li><i data-lucide="activity"></i> Engine and fuel monitoring</li>
       </ul>
 
       <a href="contact.html" class="btn btn-small">Request Solution</a>
@@ -81,11 +85,11 @@
       </div>
 
       <ul class="features">
-        <li>24/7 live video monitoring</li>
-        <li>Remote access via mobile or desktop</li>
-        <li>Motion detection alerts</li>
-        <li>Video recording and playback</li>
-        <li>PTZ camera control</li>
+        <li><i data-lucide="video"></i> 24/7 live video monitoring</li>
+        <li><i data-lucide="monitor"></i> Remote access via mobile or desktop</li>
+        <li><i data-lucide="alert-triangle"></i> Motion detection alerts</li>
+        <li><i data-lucide="play-circle"></i> Video recording and playback</li>
+        <li><i data-lucide="camera"></i> PTZ camera control</li>
       </ul>
 
       <a href="contact.html" class="btn btn-small">Request Solution</a>
@@ -101,11 +105,11 @@
       </div>
 
       <ul class="features">
-        <li>Live monitoring control room</li>
-        <li>Instant incident detection</li>
-        <li>Emergency response coordination</li>
-        <li>Alarm system integration</li>
-        <li>Real-time alerts and reporting</li>
+        <li><i data-lucide="eye"></i> Live monitoring control room</li>
+        <li><i data-lucide="zap"></i> Instant incident detection</li>
+        <li><i data-lucide="shield"></i> Emergency response coordination</li>
+        <li><i data-lucide="bell"></i> Alarm system integration</li>
+        <li><i data-lucide="bar-chart"></i> Real-time alerts and reporting</li>
       </ul>
 
       <a href="contact.html" class="btn btn-small">Learn More</a>
@@ -121,11 +125,11 @@
       </div>
 
       <ul class="features">
-        <li>Fleet-wide tracking dashboard</li>
-        <li>Vehicle usage monitoring</li>
-        <li>Driver behaviour insights</li>
-        <li>Maintenance scheduling</li>
-        <li>Fuel efficiency tracking</li>
+        <li><i data-lucide="layout-dashboard"></i> Fleet-wide tracking dashboard</li>
+        <li><i data-lucide="truck"></i> Vehicle usage monitoring</li>
+        <li><i data-lucide="user-check"></i> Driver behaviour insights</li>
+        <li><i data-lucide="calendar"></i> Maintenance scheduling</li>
+        <li><i data-lucide="fuel"></i> Fuel efficiency tracking</li>
       </ul>
 
       <a href="contact.html" class="btn btn-small">Request Solution</a>
@@ -141,11 +145,11 @@
       </div>
 
       <ul class="features">
-        <li>Real-time individual tracking</li>
-        <li>SOS emergency alert button</li>
-        <li>Geofencing for personnel safety</li>
-        <li>Discreet wearable tracking devices</li>
-        <li>Ideal for executive protection</li>
+        <li><i data-lucide="user"></i> Real-time individual tracking</li>
+        <li><i data-lucide="alert-circle"></i> SOS emergency alert button</li>
+        <li><i data-lucide="map-pin"></i> Geofencing for personnel safety</li>
+        <li><i data-lucide="watch"></i> Discreet wearable tracking devices</li>
+        <li><i data-lucide="shield-check"></i> Ideal for executive protection</li>
       </ul>
 
       <a href="contact.html" class="btn btn-small">Request Solution</a>
@@ -170,6 +174,8 @@
   </p>
 </footer>
 
+<!-- KEEP EXISTING SCRIPTS (UNCHANGED FOR NOW) -->
+
 <!-- MOBILE NAV SCRIPT -->
 <script>
 document.getElementById("nav-toggle").addEventListener("click", function() {
@@ -190,6 +196,11 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 faders.forEach(el => observer.observe(el));
+</script>
+
+<!-- ✅ ICON INIT -->
+<script>
+lucide.createIcons();
 </script>
 
 </body>
