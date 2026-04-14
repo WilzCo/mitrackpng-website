@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #050505, #0a1f3d);
+    background: linear-gradient(135deg, #0a0a0a, #0d1b2a);
     color: #fff;
     line-height: 1.6;
 }
@@ -20,7 +20,7 @@ body {
 nav {
     width: 100%;
     padding: 15px 20px;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -32,7 +32,7 @@ nav {
 }
 
 .logo {
-    height: 55px;
+    height: 50px;
 }
 
 /* MOBILE BUTTON */
@@ -46,7 +46,6 @@ nav {
     cursor: pointer;
 }
 
-/* HIDE TOGGLE ON DESKTOP */
 @media (min-width: 768px) {
     #nav-toggle {
         display: none;
@@ -68,11 +67,9 @@ nav {
     transition: 0.3s;
 }
 
-/* GOLD PRIMARY + BLUE ACCENT */
 .nav-links a:hover,
 .nav-links a.active {
     color: #f5c400;
-    text-shadow: 0 0 6px rgba(77,163,255,0.5);
 }
 
 /* MOBILE NAV */
@@ -100,7 +97,6 @@ nav {
 .hero h1 {
     font-size: 42px;
     color: #f5c400;
-    text-shadow: 0 0 10px rgba(77,163,255,0.3);
     margin-bottom: 20px;
 }
 
@@ -129,7 +125,6 @@ nav {
 .btn-primary {
     background: #f5c400;
     color: #000;
-    font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -178,7 +173,7 @@ nav {
 .card {
     background: rgba(255, 255, 255, 0.05);
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.08);
     transition: 0.3s;
@@ -196,20 +191,6 @@ nav {
 
 .card p {
     color: #aaa;
-}
-
-/* =========================
-   FEATURES LIST
-========================= */
-.features {
-    margin-top: 10px;
-    padding-left: 18px;
-}
-
-.features li {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 6px;
 }
 
 /* =========================
@@ -241,14 +222,14 @@ nav {
     border-radius: 10px;
 }
 
-/* GLOWING POINTS (BLUE ACCENT) */
+/* GLOW POINTS */
 .map-point {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: #4da3ff;
+    background: #f5c400;
     border-radius: 50%;
-    box-shadow: 0 0 10px #4da3ff, 0 0 20px #4da3ff;
+    box-shadow: 0 0 10px #f5c400, 0 0 20px #f5c400;
     animation: pulse 1.5s infinite;
 }
 
@@ -291,7 +272,6 @@ input, select, textarea {
     color: #fff;
 }
 
-/* DROPDOWN FIX */
 select {
     background: rgba(0,0,0,0.6);
 }
