@@ -44,7 +44,7 @@
 
   <div class="hero-buttons">
     <a href="contact.html" class="btn btn-primary">Request Consultation</a>
-    <a href="services.html" class="btn btn-outline">Explore Services</a>
+    <a href="products.html" class="btn btn-outline">Explore Products</a>
   </div>
 </section>
 
@@ -140,29 +140,8 @@
   </p>
 </footer>
 
-<!-- MOBILE NAV SCRIPT -->
-<script>
-document.getElementById("nav-toggle").addEventListener("click", function() {
-    document.querySelector("nav").classList.toggle("open");
-});
-</script>
-
-<!-- SCROLL ANIMATION SCRIPT -->
-<script>
-const faders = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, {
-    threshold: 0.2
-});
-
-faders.forEach(el => observer.observe(el));
-</script>
+ <!-- MAIN JS -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
