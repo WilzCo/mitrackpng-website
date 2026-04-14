@@ -361,10 +361,15 @@ nav {
 }
 
 .motto-text {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif; /* or Great Vibes */
+    font-size: 2rem;
+    font-style: italic;
+
     color: var(--primary-gold);
+
     letter-spacing: 1px;
+    text-align: center;
+
     text-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
 }
 
