@@ -428,14 +428,75 @@ footer {
 }
 
 /* =========================
-   TESTIMONIALS
+   TESTIMONIALS (PREMIUM)
 ========================= */
-.card p {
-    font-style: italic;
+
+.testimonials {
+    position: relative;
 }
 
-.card h4 {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #4da6ff; /* PCS blue accent */
+/* TESTIMONIAL CARD */
+.testimonial-card {
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.04),
+        rgba(0, 60, 120, 0.25)
+    );
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border: 1px solid rgba(0, 150, 255, 0.6);
+    box-shadow: 
+        0 15px 40px rgba(0, 150, 255, 0.25),
+        0 0 20px rgba(0, 150, 255, 0.15);
+}
+
+/* GLOW LINE */
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pcs-blue), transparent);
+    transition: 0.6s;
+}
+
+.testimonial-card:hover::before {
+    left: 120%;
+}
+
+/* STARS */
+.stars {
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* TEXT */
+.testimonial-card p {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* NAME */
+.testimonial-card h4 {
+    color: var(--light-blue);
+    margin-bottom: 5px;
+}
+
+/* ROLE / LOCATION */
+.testimonial-card span {
+    font-size: 13px;
+    color: #888;
 }
