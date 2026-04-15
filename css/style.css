@@ -426,3 +426,16 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.card p {
+    font-style: italic;
+}
+
+.card h4 {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4da6ff; /* PCS blue accent */
+}
