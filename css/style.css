@@ -536,3 +536,47 @@ footer {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
+/* =========================
+   CONTACT PROFILE IMAGES (PREMIUM)
+========================= */
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.contact-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* Premium gradient ring */
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, var(--primary-gold), var(--pcs-blue)) border-box;
+
+  /* Depth + glow */
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.4),
+    0 0 10px rgba(13,110,253,0.2);
+
+  transition: all 0.3s ease;
+}
+
+/* Smooth hover interaction */
+.card:hover .contact-img {
+  transform: scale(1.08);
+  box-shadow: 
+    0 6px 18px rgba(0,0,0,0.5),
+    0 0 14px rgba(13,110,253,0.35);
+}
+
+.role {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
