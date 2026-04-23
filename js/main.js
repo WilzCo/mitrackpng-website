@@ -6,12 +6,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const toggle = document.getElementById("nav-toggle");
   const nav = document.querySelector("nav");
+  const navLinks = document.querySelectorAll(".nav-links a");
 
   if (toggle) {
+    toggle.setAttribute("aria-expanded", "false");
+
     toggle.addEventListener("click", function () {
       nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", nav.classList.contains("open") ? "true" : "false");
     });
   }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      if (nav && nav.classList.contains("open")) {
+        nav.classList.remove("open");
+
+        if (toggle) {
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      }
+    });
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 820 && nav && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
 
   // ==========================
   // SCROLL EFFECT (NAVBAR)
@@ -27,17 +53,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // ==========================
   // FADE-IN ANIMATION
   // ==========================
-  const faders = document.querySelectorAll('.fade-in');
+  const faders = document.querySelectorAll(".fade-in");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.2 });
+  faders.forEach((element, index) => {
+    element.style.transitionDelay = `${Math.min(index * 70, 420)}ms`;
+  });
 
-  faders.forEach(el => observer.observe(el));
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -40px 0px" });
+
+    faders.forEach((el) => observer.observe(el));
+  } else {
+    faders.forEach((el) => el.classList.add("show"));
+  }
 
   // ==========================
   // PROFILE MODAL FUNCTIONALITY
@@ -117,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createStars(rating) {
-    return "★".repeat(rating) + "☆".repeat(5 - rating);
+    return "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
   }
 
   function formatDate(dateString) {
