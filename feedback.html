@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Feedback | MiTrack PNG</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav-center">
+  <div class="nav-top">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
+      </a>
+    </div>
+
+    <button id="nav-toggle" aria-label="Toggle menu">Menu</button>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="feedback.html" class="active">Feedback</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero fade-in">
+  <h1>Customer Feedback</h1>
+  <p class="feedback-highlight">
+    Share your experience with MiTrack PNG. Customers can post a review, rate our service,
+    and read what others have said.
+  </p>
+</section>
+
+<!-- FEEDBACK -->
+<section class="section fade-in">
+  <div class="section-title">
+    <h2>Post Your Review</h2>
+    <p>Your review is saved in this browser so it appears instantly on the page.</p>
+  </div>
+
+  <div class="feedback-layout">
+    <div class="card feedback-form-card">
+      <form id="feedbackForm" class="feedback-form">
+        <div class="feedback-meta">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="company" placeholder="Company or Team">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <select name="rating" required>
+            <option value="" disabled selected>Select Rating</option>
+            <option value="5">5 Stars - Excellent</option>
+            <option value="4">4 Stars - Very Good</option>
+            <option value="3">3 Stars - Good</option>
+            <option value="2">2 Stars - Fair</option>
+            <option value="1">1 Star - Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" placeholder="Tell us about your experience with MiTrack PNG" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <p id="feedbackMessage" class="feedback-success"></p>
+          <button type="submit" class="btn btn-primary">Post Feedback</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card feedback-list-card">
+      <div class="feedback-list-header">
+        <h3>Recent Reviews</h3>
+        <p id="feedbackCount" class="feedback-count">0 reviews</p>
+      </div>
+
+      <div id="feedbackList" class="feedback-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade-in">
+  <h3>Need Help Right Away?</h3>
+  <p>Contact our team if you would like support, a service update, or a tailored solution.</p>
+  <a href="contact.html" class="btn btn-primary">Contact MiTrack PNG</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="fade-in">
+  <p>&copy; 2026 MiTrack PNG | Powered by <strong>Pacific Corporate Security</strong></p>
+  <p>
+    Hotline: +675 7543 6507 / +675 7939 5907 |
+    Email: mitrack@mitrack.com.au
+  </p>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

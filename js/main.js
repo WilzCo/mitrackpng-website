@@ -2,6 +2,7 @@
 // NAV TOGGLE (MOBILE)
 // ==========================
 document.addEventListener("DOMContentLoaded", function () {
+  const FEEDBACK_STORAGE_KEY = "mitrack-feedback-posts";
 
   const toggle = document.getElementById("nav-toggle");
   const nav = document.querySelector("nav");
@@ -92,5 +93,146 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = "none";
     }
   });
+
+  // ==========================
+  // FEEDBACK BOARD
+  // ==========================
+  const feedbackForm = document.getElementById("feedbackForm");
+  const feedbackList = document.getElementById("feedbackList");
+  const feedbackCount = document.getElementById("feedbackCount");
+  const feedbackMessage = document.getElementById("feedbackMessage");
+
+  function getStoredFeedback() {
+    try {
+      const raw = localStorage.getItem(FEEDBACK_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveFeedback(entries) {
+    localStorage.setItem(FEEDBACK_STORAGE_KEY, JSON.stringify(entries));
+  }
+
+  function createStars(rating) {
+    return "★".repeat(rating) + "☆".repeat(5 - rating);
+  }
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+
+    if (Number.isNaN(date.getTime())) {
+      return "Recently posted";
+    }
+
+    return date.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    });
+  }
+
+  function renderFeedback() {
+    if (!feedbackList) {
+      return;
+    }
+
+    const entries = getStoredFeedback().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    feedbackList.innerHTML = "";
+
+    if (feedbackCount) {
+      feedbackCount.textContent = `${entries.length} review${entries.length === 1 ? "" : "s"}`;
+    }
+
+    if (!entries.length) {
+      const emptyState = document.createElement("div");
+      emptyState.className = "feedback-empty";
+      emptyState.textContent = "No customer feedback has been posted yet. Be the first to share your experience.";
+      feedbackList.appendChild(emptyState);
+      return;
+    }
+
+    entries.forEach((entry) => {
+      const article = document.createElement("article");
+      article.className = "feedback-item";
+
+      const header = document.createElement("div");
+      header.className = "feedback-item-header";
+
+      const identity = document.createElement("div");
+      const name = document.createElement("h4");
+      name.textContent = entry.name;
+
+      const company = document.createElement("p");
+      company.className = "feedback-company";
+      company.textContent = entry.company || "Customer";
+
+      identity.appendChild(name);
+      identity.appendChild(company);
+
+      const aside = document.createElement("div");
+      const rating = document.createElement("div");
+      rating.className = "feedback-rating";
+      rating.textContent = createStars(entry.rating);
+
+      const date = document.createElement("div");
+      date.className = "feedback-date";
+      date.textContent = formatDate(entry.createdAt);
+
+      aside.appendChild(rating);
+      aside.appendChild(date);
+
+      const body = document.createElement("p");
+      body.className = "feedback-text";
+      body.textContent = entry.message;
+
+      header.appendChild(identity);
+      header.appendChild(aside);
+      article.appendChild(header);
+      article.appendChild(body);
+      feedbackList.appendChild(article);
+    });
+  }
+
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(feedbackForm);
+      const name = String(formData.get("name") || "").trim();
+      const company = String(formData.get("company") || "").trim();
+      const rating = Number(formData.get("rating"));
+      const message = String(formData.get("message") || "").trim();
+
+      if (!name || !message || !rating) {
+        if (feedbackMessage) {
+          feedbackMessage.textContent = "Please complete your name, rating, and feedback before posting.";
+        }
+        return;
+      }
+
+      const entries = getStoredFeedback();
+      entries.push({
+        name: name,
+        company: company,
+        rating: Math.min(Math.max(rating, 1), 5),
+        message: message,
+        createdAt: new Date().toISOString()
+      });
+
+      saveFeedback(entries);
+      feedbackForm.reset();
+
+      if (feedbackMessage) {
+        feedbackMessage.textContent = "Thanks for your feedback. Your review has been added on this device.";
+      }
+
+      renderFeedback();
+    });
+  }
+
+  renderFeedback();
 
 });
