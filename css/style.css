@@ -50,19 +50,17 @@ body::before {
 }
 
 /* =========================
-   NAVBAR (UPDATED LAYOUT ONLY)
+   NAVBAR
 ========================= */
 nav {
     width: 100%;
     padding: 15px 30px;
     background: #000;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* LEFT - LOGO */
 .nav-logo {
     display: flex;
     align-items: center;
@@ -77,12 +75,10 @@ nav {
     transform: scale(1.05);
 }
 
-/* CENTER - NAV LINKS */
 .nav-links {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
     display: flex;
     gap: 40px;
     list-style: none;
@@ -141,18 +137,8 @@ nav {
     background: #ffd633;
 }
 
-.btn-outline {
-    border: 1px solid var(--primary-gold);
-    color: var(--primary-gold);
-}
-
-.btn-outline:hover {
-    background: var(--primary-gold);
-    color: #000;
-}
-
 /* =========================
-   SECTION (GLASS PANELS)
+   SECTION
 ========================= */
 .section {
     padding: 60px 20px;
@@ -172,24 +158,26 @@ nav {
     color: var(--primary-gold);
 }
 
-.section-title p {
-    color: #aaa;
-}
-
 /* =========================
-   GRID
+   GRID (FIXED)
 ========================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 20px;
+
+    /* Safe centering without breaking layout */
+    justify-items: center;
 }
 
 /* =========================
-   CARD
+   CARD (SAFE VERSION)
 ========================= */
 .card {
+    width: 100%;
+    max-width: 360px;
+
     background: linear-gradient(
         135deg,
         rgba(255,255,255,0.03),
@@ -202,9 +190,9 @@ nav {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    line-height: 1.5;
 }
 
+/* Hover */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
     border: 1px solid rgba(0, 150, 255, 0.6);
@@ -213,334 +201,9 @@ nav {
         0 0 20px rgba(0, 150, 255, 0.15);
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 120%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--pcs-blue), transparent);
-    transition: 0.6s;
-}
-
-.card:hover::before {
-    left: 120%;
-}
-
-.card h4 {
-    color: var(--primary-gold);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.card:hover h4 {
-    color: var(--light-blue);
-}
-
-.card p {
-    color: #aaa;
-    margin: 10px 0;
-}
-
-.card a {
-    color: var(--light-blue);
-    text-decoration: none;
-}
-
-.card a:hover {
-    color: #8ecbff;
-}
-
-.card .btn {
-    margin-top: 12px;
-}
-
 /* =========================
-   PRODUCT FUNCTIONALITY
+   CONTACT PROFILE
 ========================= */
-.product-functions h5 {
-    font-size: 13px;
-    color: var(--light-blue);
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.features {
-    margin: 10px 0;
-    padding-left: 18px;
-}
-
-.features li {
-    margin-bottom: 5px;
-    color: #ccc;
-}
-
-/* =========================
-   MAP
-========================= */
-.map-container {
-    position: relative;
-    margin: 30px auto;
-    max-width: 800px;
-}
-
-.map-container img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.map-point {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: var(--primary-gold);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--primary-gold);
-    animation: pulse 1.5s infinite;
-}
-
-.point2 {
-    background: var(--pcs-blue);
-    box-shadow: 0 0 10px var(--pcs-blue);
-}
-
-.point1 { top: 40%; left: 30%; }
-.point2 { top: 55%; left: 60%; }
-.point3 { top: 25%; left: 70%; }
-
-@keyframes pulse {
-    50% { transform: scale(1.6); opacity: 0.6; }
-}
-
-/* =========================
-   CONTACT FORM
-========================= */
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.form-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(20,20,20,0.9);
-    color: #fff;
-}
-
-.contact-form select option {
-    background: #0a0a0a;
-    color: #fff;
-}
-
-/* =========================
-   MOTTO
-========================= */
-.motto {
-    text-align: center;
-    padding: 10px 20px 40px;
-    margin-top: -30px;
-}
-
-.motto-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.motto-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-style: italic;
-    color: var(--primary-gold);
-    letter-spacing: 1px;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
-}
-
-/* =========================
-   ABOUT
-========================= */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-}
-
-.about-visual {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* =========================
-   CTA + FOOTER
-========================= */
-.cta {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
-}
-
-/* =========================
-   MOBILE
-========================= */
-#nav-toggle {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    #nav-toggle {
-        display: block;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row {
-        flex-direction: column;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================
-   TESTIMONIALS (PREMIUM)
-========================= */
-
-.testimonials {
-    position: relative;
-}
-
-/* TESTIMONIAL CARD */
-.testimonial-card {
-    background: linear-gradient(
-        135deg,
-        rgba(255,255,255,0.04),
-        rgba(0, 60, 120, 0.25)
-    );
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-/* HOVER EFFECT */
-.testimonial-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    border: 1px solid rgba(0, 150, 255, 0.6);
-    box-shadow: 
-        0 15px 40px rgba(0, 150, 255, 0.25),
-        0 0 20px rgba(0, 150, 255, 0.15);
-}
-
-/* GLOW LINE */
-.testimonial-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 120%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--pcs-blue), transparent);
-    transition: 0.6s;
-}
-
-.testimonial-card:hover::before {
-    left: 120%;
-}
-
-/* STARS */
-.stars {
-    color: var(--primary-gold);
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-/* TEXT */
-.testimonial-card p {
-    font-style: italic;
-    color: #ccc;
-    margin-bottom: 15px;
-}
-
-/* NAME */
-.testimonial-card h4 {
-    color: var(--light-blue);
-    margin-bottom: 5px;
-}
-
-/* ROLE / LOCATION */
-.testimonial-card span {
-    font-size: 13px;
-    color: #888;
-}
-
-.contact-number {
-  font-weight: 500;
-  margin: 10px 0;
-}
-
-.contact-actions {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.contact-actions .btn {
-  flex: 1;
-  text-align: center;
-  padding: 8px;
-  border-radius: 6px;
-  font-size: 13px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.contact-actions .whatsapp {
-  background: #25D366;
-  color: #fff;
-}
-
-.contact-actions .call {
-  background: #007BFF;
-  color: #fff;
-}
-
-.contact-actions .btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* =========================
-   CONTACT PROFILE IMAGES (PREMIUM)
-========================= */
-
 .contact-header {
   display: flex;
   align-items: center;
@@ -554,108 +217,54 @@ footer {
   border-radius: 50%;
   object-fit: cover;
 
-  /* Premium gradient ring */
   border: 2px solid transparent;
   background: linear-gradient(#000, #000) padding-box,
               linear-gradient(135deg, var(--primary-gold), var(--pcs-blue)) border-box;
 
-  /* Depth + glow */
   box-shadow: 
     0 4px 12px rgba(0,0,0,0.4),
     0 0 10px rgba(13,110,253,0.2);
-
-  transition: all 0.3s ease;
 }
 
-/* Smooth hover interaction */
 .card:hover .contact-img {
   transform: scale(1.08);
-  box-shadow: 
-    0 6px 18px rgba(0,0,0,0.5),
-    0 0 14px rgba(13,110,253,0.35);
 }
 
 .role {
   font-size: 13px;
   color: #888;
-  margin-top: 2px;
 }
 
 /* =========================
-   PROFILE MODAL (VIEW PROFILE)
+   MODAL
 ========================= */
-
 .modal {
   display: none;
   position: fixed;
   z-index: 999;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.85);
   backdrop-filter: blur(6px);
-  animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
-  background: linear-gradient(
-      135deg,
-      rgba(255,255,255,0.04),
-      rgba(0, 60, 120, 0.25)
-  );
   margin: 8% auto;
   padding: 25px;
   border-radius: 12px;
-  width: 90%;
   max-width: 420px;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  box-shadow: 
-    0 15px 40px rgba(0, 150, 255, 0.2),
-    0 0 20px rgba(0, 150, 255, 0.15);
-}
-
-.modal-close {
-  float: right;
-  font-size: 22px;
-  cursor: pointer;
-  color: #aaa;
-  transition: 0.3s;
-}
-
-.modal-close:hover {
-  color: var(--primary-gold);
+  background: rgba(0,0,0,0.9);
 }
 
 .modal-header {
   display: flex;
-  align-items: center;
   gap: 15px;
-  margin-bottom: 15px;
 }
 
 .modal-img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  object-fit: cover;
-
-  /* Match profile style */
-  border: 2px solid transparent;
-  background: linear-gradient(#000, #000) padding-box,
-              linear-gradient(135deg, var(--primary-gold), var(--pcs-blue)) border-box;
-}
-
-.modal-body {
-  color: #ccc;
-  margin-bottom: 15px;
-  font-size: 14px;
-}
-
-.modal-body strong {
-  color: #fff;
 }
 
 .modal-actions {
@@ -663,20 +272,20 @@ footer {
   gap: 10px;
 }
 
-/* Prevent button click conflict inside card */
-.contact-actions a {
-  position: relative;
-  z-index: 2;
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
