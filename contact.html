@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contact | MiTrack PNG</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -14,15 +15,12 @@
 <!-- NAVBAR -->
 <nav class="nav-center">
   <div class="nav-top">
-    
     <div class="nav-logo">
       <a href="index.html">
         <img src="assets/images/logo.png" alt="MiTrack Logo" class="logo">
       </a>
     </div>
-
-    <button id="nav-toggle" aria-label="Toggle menu">☰</button>
-
+    <button id="nav-toggle">☰</button>
   </div>
 
   <ul class="nav-links">
@@ -41,76 +39,104 @@
 
 <!-- CONTACT FORM -->
 <section class="section fade-in">
-  <div class="section-title">
-    <h2>Send Us a Message</h2>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Send Us a Message</h2>
+    </div>
+
+    <div class="card">
+
+      <!-- ✅ WORKING FORM (FormSubmit) -->
+      <form action="https://formsubmit.co/ajax/mitrack@mitrack.com.au"
+            method="POST"
+            class="contact-form">
+
+        <!-- REQUIRED -->
+        <input type="hidden" name="_subject" value="New enquiry from MiTrack PNG website">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="+675 ..." required>
+          </div>
+
+          <div class="form-group">
+            <select name="service" required>
+              <option value="" disabled selected>Select Service</option>
+              <option value="GPS Tracking">GPS Tracking</option>
+              <option value="CCTV Installation">CCTV Installation</option>
+              <option value="24/7 Monitoring">24/7 Monitoring</option>
+              <option value="Fleet Management">Fleet Management</option>
+              <option value="Alarm Systems">Alarm Systems</option>
+              <option value="Personal Tracking Devices">Personal Tracking Devices</option>
+            </select>
+          </div>
+
+          <div class="form-group form-group-full">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <p class="form-note">We usually respond within one business day.</p>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+
+      </form>
+
+    </div>
+
   </div>
-
-  <form class="contact-form" onsubmit="sendEmail(event)">
-
-    <div class="form-row">
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="email" id="email" placeholder="Email Address" required>
-    </div>
-
-    <div class="form-row">
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-
-      <select id="service">
-        <option value="">Select Service</option>
-        <option value="GPS Tracking">GPS Tracking</option>
-        <option value="CCTV Installation">CCTV Installation</option>
-        <option value="24/7 Monitoring">24/7 Monitoring</option>
-        <option value="Fleet Management">Fleet Management</option>
-      </select>
-    </div>
-
-    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-
-  </form>
 </section>
 
 <!-- CONTACT INFO -->
 <section class="section fade-in">
-  <div class="section-title">
-    <h2>Contact Information</h2>
-    <p>Reach out to our team directly through the details below.</p>
-  </div>
+  <div class="container">
 
-  <div class="grid">
-
-    <div class="card fade-in">
-      <h4>Hotline</h4>
-      <p>
-        <a href="tel:+67575436507">+675 7543 6507</a><br>
-        <a href="tel:+67579395907">+675 7939 5907</a>
-      </p>
+    <div class="section-title">
+      <h2>Contact Information</h2>
+      <p>Reach out to our team directly through the details below.</p>
     </div>
 
-    <div class="card fade-in">
-      <h4>Email</h4>
-      <p>
-        <a href="mailto:mitrack@mitrack.com.au">
-          mitrack@mitrack.com.au
-        </a>
-      </p>
-    </div>
+    <div class="grid">
 
-    <div class="card fade-in">
-      <h4>Office Location</h4>
-      <p>
-        Port Moresby<br>
-        Papua New Guinea
-      </p>
-    </div>
+      <div class="card fade-in">
+        <h4>Hotline</h4>
+        <p>
+          <a href="tel:+67575436507">+675 7543 6507</a><br>
+          <a href="tel:+67579395907">+675 7939 5907</a>
+        </p>
+      </div>
 
-    <div class="card fade-in">
-      <h4>Availability</h4>
-      <p>
-        24/7 Monitoring & Support<br>
-        Powered by PCS Rapid Response
-      </p>
+      <div class="card fade-in">
+        <h4>Email</h4>
+        <p>
+          <a href="mailto:mitrack@mitrack.com.au">mitrack@mitrack.com.au</a>
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <h4>Office Location</h4>
+        <p>Port Moresby, Papua New Guinea</p>
+      </div>
+
+      <div class="card fade-in">
+        <h4>Availability</h4>
+        <p>24/7 Monitoring & Support<br>Powered by PCS Rapid Response</p>
+      </div>
+
     </div>
 
   </div>
@@ -118,49 +144,51 @@
 
 <!-- TEAM CONTACT -->
 <section class="section fade-in">
-  <div class="section-title">
-    <h2>Key Contacts</h2>
-    <p>Reach out directly to our leadership team for assistance and coordination.</p>
-  </div>
+  <div class="container">
 
-  <div class="grid">
-
-    <div class="card fade-in">
-      <h4>⭐ Paul Young</h4>
-      <p><strong>National Branch Manager</strong></p>
-      <p>
-        📞 <a href="tel:+67571915137">+675 7191 5137</a><br>
-        📧 <a href="mailto:paul.youngwatchdog@gmail.com">paul.young@mitrack.com.au</a>
-      </p>
+    <div class="section-title">
+      <h2>Key Contacts</h2>
+      <p>Reach out directly to our leadership team for assistance and coordination.</p>
     </div>
 
-    <div class="card fade-in">
-      <h4>Dewith Fitcher</h4>
-      <p><strong>Team Leader</strong></p>
-      <p>
-        📞 <a href="tel:+67575914066">+675 7591 4066</a><br>
-        📧 <a href="mailto:dewith@mitrack.com.au">dewith@mitrack.com.au</a>
-      </p>
-    </div>
+    <div class="grid">
 
-    <div class="card fade-in">
-      <h4>Garme Nuahui</h4>
-      <p><strong>Senior Technician</strong></p>
-      <p>
-        📞 <a href="tel:+67572200623">+675 7220 0623</a><br>
-        📧 <a href="mailto:garme@mitrack.com.au">garme@mitrack.com.au</a>
-      </p>
-    </div>
+      <div class="card fade-in">
+        <h4>Paul Young</h4>
+        <p><strong>National Branch Manager</strong></p>
+        <p>
+          <a href="tel:+67571915137">+675 7191 5137</a><br>
+          <a href="mailto:paul.young@mitrack.com.au">paul.young@mitrack.com.au</a>
+        </p>
+      </div>
 
-    <div class="card fade-in">
-      <h4>Irene Dala Harry</h4>
-      <p><strong>Accounts Receivable</strong></p>
-      <p>
-        📞 <a href="tel:+67570658376">+675 7065 8376</a><br>
-        📧 <a href="mailto:accounts.receivable@pcsgroup.com.pg">
-          accounts.receivable@pcsgroup.com.pg
-        </a>
-      </p>
+      <div class="card fade-in">
+        <h4>Dewith Fitcher</h4>
+        <p><strong>Team Leader</strong></p>
+        <p>
+          <a href="tel:+67575914066">+675 7591 4066</a><br>
+          <a href="mailto:dewith@mitrack.com.au">dewith@mitrack.com.au</a>
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <h4>Garme Nuahui</h4>
+        <p><strong>Senior Technician</strong></p>
+        <p>
+          <a href="tel:+67572200623">+675 7220 0623</a><br>
+          <a href="mailto:garme@mitrack.com.au">garme@mitrack.com.au</a>
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <h4>Irene Dala Harry</h4>
+        <p><strong>Accounts Receivable</strong></p>
+        <p>
+          <a href="tel:+67570658376">+675 7065 8376</a><br>
+          <a href="mailto:accounts.receivable@pcsgroup.com.pg">accounts.receivable@pcsgroup.com.pg</a>
+        </p>
+      </div>
+
     </div>
 
   </div>
@@ -168,9 +196,11 @@
 
 <!-- CTA -->
 <section class="cta fade-in">
-  <h3>Ready to Get Started?</h3>
-  <p>Speak with our team and secure your operations today.</p>
-  <a href="contact.html" class="btn btn-primary">Request Consultation</a>
+  <div class="container">
+    <h3>Ready to Get Started?</h3>
+    <p>Speak with our team and secure your operations today.</p>
+    <a href="contact.html" class="btn btn-primary">Request Consultation</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -182,36 +212,6 @@
   </p>
 </footer>
 
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-(function(){
-  emailjs.init("1AkzH_EelLo2ArOSZ");
-})();
-</script>
-
-<script>
-function sendEmail(e) {
-  e.preventDefault();
-
-  emailjs.send("service_zyI3sgr", "template_6vy6rz6", {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    service: document.getElementById("service").value,
-    message: document.getElementById("message").value
-  })
-  .then(function() {
-      alert("✅ Message sent successfully!");
-  }, function(error) {
-      alert("❌ Failed to send message.");
-      console.log(error);
-  });
-}
-</script>
-
-<!-- MAIN JS -->
 <script src="js/main.js"></script>
 
 </body>
