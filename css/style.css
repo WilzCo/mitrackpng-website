@@ -375,4 +375,47 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
+
+   /* =========================
+   CONTACT ACTION BUTTONS
+========================= */
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 9px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+/* WhatsApp (GREEN) */
+.btn.whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: none;
+}
+
+.btn.whatsapp:hover {
+  background: #1ebe5d;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+}
+
+/* Call (BLUE) */
+.btn.call {
+  background: var(--pcs-blue);
+  color: #fff;
+  border: none;
+}
+
+.btn.call:hover {
+  background: #0b5ed7;
+  box-shadow: 0 0 10px rgba(13,110,253,0.4);
+}
 }
