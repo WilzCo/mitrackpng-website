@@ -195,7 +195,7 @@ nav {
 }
 
 /* =========================
-   ICON ALIGNMENT (ADDED FIX)
+   ICON ALIGNMENT
 ========================= */
 .card h4 {
     display: flex;
@@ -246,7 +246,7 @@ nav {
 }
 
 /* =========================
-   CONTACT FORM (FIXED)
+   CONTACT FORM
 ========================= */
 .contact-form {
   max-width: 700px;
@@ -307,6 +307,46 @@ nav {
 .form-note {
   font-size: 13px;
   color: #aaa;
+}
+
+/* =========================
+   CONTACT ACTION BUTTONS (FIXED)
+========================= */
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s ease;
+  color: #fff;
+}
+
+.btn.whatsapp {
+  background-color: #25D366;
+}
+
+.btn.whatsapp:hover {
+  background-color: #1ebe5d;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+}
+
+.btn.call {
+  background-color: var(--pcs-blue);
+}
+
+.btn.call:hover {
+  background-color: #0b5ed7;
+  box-shadow: 0 0 10px rgba(13,110,253,0.4);
 }
 
 /* =========================
@@ -375,47 +415,4 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
-
-   /* =========================
-   CONTACT ACTION BUTTONS
-========================= */
-.contact-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.contact-actions .btn {
-  flex: 1;
-  text-align: center;
-  padding: 9px;
-  font-size: 13px;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: 0.25s ease;
-}
-
-/* WhatsApp (GREEN) */
-.btn.whatsapp {
-  background: #25D366;
-  color: #fff;
-  border: none;
-}
-
-.btn.whatsapp:hover {
-  background: #1ebe5d;
-  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
-}
-
-/* Call (BLUE) */
-.btn.call {
-  background: var(--pcs-blue);
-  color: #fff;
-  border: none;
-}
-
-.btn.call:hover {
-  background: #0b5ed7;
-  box-shadow: 0 0 10px rgba(13,110,253,0.4);
-}
 }
