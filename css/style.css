@@ -195,6 +195,15 @@ nav {
 }
 
 /* =========================
+   ICON ALIGNMENT (ADDED FIX)
+========================= */
+.card h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================
    CONTACT CARDS
 ========================= */
 .contact-card {
