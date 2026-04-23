@@ -500,3 +500,39 @@ footer {
     font-size: 13px;
     color: #888;
 }
+
+.contact-number {
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-actions .whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.contact-actions .call {
+  background: #007BFF;
+  color: #fff;
+}
+
+.contact-actions .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
