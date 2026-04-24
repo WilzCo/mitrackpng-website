@@ -1174,3 +1174,65 @@ footer p + p {
         transform: none;
     }
 }
+
+/* ==========================
+   CONTACT FIXES (FINAL PATCH)
+   ========================== */
+
+/* EMAIL OVERFLOW FIX */
+.contact-email {
+    font-size: 13px;
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+.contact-email a {
+    display: block;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+/* SPACING CLEANUP */
+.contact-card {
+    overflow: hidden;
+}
+
+.contact-number {
+    margin: 4px 0 10px 0;
+}
+
+/* BUTTON LAYOUT (DESKTOP CLEANER) */
+.contact-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* BUTTON SIZE FIX */
+.contact-actions .btn {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+    .contact-actions {
+        gap: 8px;
+    }
+
+    .contact-actions .btn {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .contact-email {
+        font-size: 12px;
+    }
+}
