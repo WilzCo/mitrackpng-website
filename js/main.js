@@ -102,7 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
       modalName.textContent = name;
       modalRole.textContent = role;
       modalPhone.textContent = phone;
+
+      // ✅ FIXED EMAIL (CLICKABLE)
       modalEmail.textContent = email;
+      modalEmail.href = "mailto:" + email;
+
       modalImg.src = img;
 
       // Clean phone number for WhatsApp
@@ -170,9 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderFeedback() {
-    if (!feedbackList) {
-      return;
-    }
+    if (!feedbackList) return;
 
     const entries = getStoredFeedback().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     feedbackList.innerHTML = "";
@@ -184,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!entries.length) {
       const emptyState = document.createElement("div");
       emptyState.className = "feedback-empty";
-      emptyState.textContent = "No customer feedback has been posted yet. Be the first to share your experience.";
+      emptyState.textContent = "No customer feedback has been posted yet.";
       feedbackList.appendChild(emptyState);
       return;
     }
@@ -243,17 +245,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!name || !message || !rating) {
         if (feedbackMessage) {
-          feedbackMessage.textContent = "Please complete your name, rating, and feedback before posting.";
+          feedbackMessage.textContent = "Please complete your name, rating, and feedback.";
         }
         return;
       }
 
       const entries = getStoredFeedback();
       entries.push({
-        name: name,
-        company: company,
+        name,
+        company,
         rating: Math.min(Math.max(rating, 1), 5),
-        message: message,
+        message,
         createdAt: new Date().toISOString()
       });
 
@@ -261,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
       feedbackForm.reset();
 
       if (feedbackMessage) {
-        feedbackMessage.textContent = "Thanks for your feedback. Your review has been added on this device.";
+        feedbackMessage.textContent = "Thanks for your feedback.";
       }
 
       renderFeedback();
